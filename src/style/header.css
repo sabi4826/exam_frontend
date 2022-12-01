@@ -1,4 +1,11 @@
-/* Gradient for header background - not as on the picture? From coolers.co*/
+:root {
+  --primary-font: "Righteous", cursive;
+  --secondary-font: "Poppins", sans-serif;
+  --tertiary-font: "Rubik Glitch", cursive;
+  font-size: 10px;
+}
+
+/* Gradient for header background. From coolers.co*/
 .foo_header {
   background-image: linear-gradient(0deg, #f6a3e4ff, #6cc1f6ff);
   background-image: linear-gradient(90deg, #f6a3e4ff, #6cc1f6ff);
@@ -8,10 +15,35 @@
   background-image: linear-gradient(135deg, #f6a3e4ff, #6cc1f6ff);
   background-image: linear-gradient(225deg, #f6a3e4ff, #6cc1f6ff);
   background-image: linear-gradient(315deg, #f6a3e4ff, #6cc1f6ff);
-  background-image: radial-gradient(#f6a3e4ff, #6cc1f6ff);
+  /*background-image: radial-gradient(#f6a3e4ff, #6cc1f6ff); - makes the pink centered*/
+  /* Not working? */
+  height: 100wh;
+  padding-left: 20vw;
+  padding-top: 5rem;
+  padding-right: 20vw;
+  padding-bottom: 5rem;
 }
 
-.foo_header h3 {
+h1 {
+  font: var(--tertiary-font);
+  font-size: 15rem;
+  font-weight: 900;
+  color: white;
+}
+
+h3 {
+  font: var(--primary-font);
+  font-size: 5rem;
   margin: 0;
 }
 
+.buy-ticket-header {
+  background-color: #f0037a;
+  border: 0;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 2px 2px 15px black;
+  font-size: 5rem;
+  font-family: var(--secondary-font);
+  margin-left: 35%;
+}
