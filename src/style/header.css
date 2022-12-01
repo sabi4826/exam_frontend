@@ -10,3 +10,7 @@
   background-image: linear-gradient(315deg, #f6a3e4ff, #6cc1f6ff);
   background-image: radial-gradient(#f6a3e4ff, #6cc1f6ff);
 }
+
+.foo_header h3 {
+  margin: 0;
+}
