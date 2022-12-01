@@ -1,0 +1,43 @@
+/* //////////////css variables///////////////////////////// */
+:root {
+  --primary-font: "Righteous", cursive;
+  --secondary-font: "Poppins", sans-serif;
+}
+
+/* //////////////////////////Navigation bar///////////////////////////////// */
+body {
+  margin: 0;
+}
+.navigation {
+  /* background: transparent; */
+  position: relative;
+  background-color: rgb(92, 92, 195);
+  padding: 2rem;
+  box-shadow: 1px 1px 10px black;
+}
+
+nav {
+  text-align: right;
+}
+nav li {
+  list-style: none;
+  display: inline;
+}
+nav li a {
+  text-decoration: none;
+  color: aliceblue;
+  padding: 14px 16px;
+  font-size: 20px;
+  font-family: var(--secondary-font);
+}
+/* ///////////////////////////////BUY ticket Button////////////////////////////////// */
+.buy-ticket-button {
+  background-color: pink;
+  border: 0;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 1px 1px 10px black;
+  font-size: 22px;
+  font-family: var(--secondary-font);
+  margin-left: 4rem;
+}
