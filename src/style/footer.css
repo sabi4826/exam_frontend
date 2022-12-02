@@ -1,0 +1,49 @@
+/* //////////////custom variables///////////////////////////// */
+:root {
+  --primary-font: "Righteous", cursive;
+  --secondary-font: "Poppins", sans-serif;
+  --tertiary-font: "Rubik Glitch", cursive;
+}
+body {
+  background-color: #70d7ff;
+}
+h2 {
+  font-size: 10rem;
+  font-family: var(--primary-font);
+  color: #ff47c3;
+}
+h3 {
+  font-size: 3.5rem;
+  font-family: var(--primary-font);
+  color: white;
+}
+p {
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+  color: white;
+}
+
+/* //////////////footer styling///////////////////////////// */
+.footer_content {
+  padding: 2rem;
+  margin: 0 2rem 0 2rem;
+  line-height: 2.5rem;
+}
+
+.footer_information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contact,
+.email,
+.socials {
+  padding-right: 4rem;
+}
+.footer_headlines {
+  display: flex;
+  padding: 2rem;
+  gap: 5rem;
+  align-items: center;
+}
