@@ -1,8 +1,10 @@
 import React from "react";
 import "../src/style/menu.css";
+import Logo from "../src/assets/musiclogo.svg";
 export default function Menu() {
   return (
     <div className="navigation">
+      <img src={Logo} className="logo" alt="logo" />
       <nav>
         <ul>
           <li>
@@ -18,6 +20,10 @@ export default function Menu() {
           <button className="buy-ticket-button">BUY TICKETS</button>
         </ul>
       </nav>
+      <a href="#" className="icon">
+        {" "}
+        <i className="fa fa-bars"></i>
+      </a>
     </div>
   );
 }
