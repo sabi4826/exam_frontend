@@ -20,10 +20,6 @@ export default function Menu() {
           <button className="buy-ticket-button">BUY TICKETS</button>
         </ul>
       </nav>
-      <a href="#" className="icon">
-        {" "}
-        <i className="fa fa-bars"></i>
-      </a>
     </div>
   );
 }

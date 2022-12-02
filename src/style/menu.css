@@ -30,6 +30,7 @@ img {
   left: 0%;
   width: 100%;
   padding: 2rem;
+
   box-shadow: 2px 2px 10px rgb(108, 193, 246);
 }
 
@@ -37,24 +38,43 @@ nav li {
   list-style: none;
   display: inline;
 }
-
-.fa {
-  font-size: 45px;
+.logo {
+  width: 20%;
+  height: 100%;
+}
+/* ///////////////////////////////BUY ticket Button////////////////////////////////// */
+.buy-ticket-button {
+  background-color: var(--dark-color1);
+  border: 0;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 1px 1px 10px black;
+  font-size: 22px;
+  font-family: var(--secondary-font);
+  margin-left: 4rem;
 }
 
-.icon {
-  display: none;
-}
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 601px) {
   .navigation {
     display: grid;
     grid-template-columns: 20% auto;
   }
+  nav {
+    display: flex;
+    justify-content: end;
+  }
+  nav ul {
+    padding: 0;
+  }
+  nav li {
+    margin-top: 1rem;
+  }
   nav li a {
-    font-size: 16px;
+    font-size: 15px;
   }
   .buy-ticket-button {
-    font-size: 17px;
+    font-size: 13px;
+    margin-left: 0px;
   }
   .logo {
     width: 100%;
@@ -62,18 +82,19 @@ nav li {
 }
 
 /* ///////////////////////mobile view///////////////////////////// */
-@media (max-width: 700px) {
-  ul {
-    display: flex;
-    justify-content: space-between;
-    gap: 2.5rem;
-  }
-  nav {
-    display: none;
-  }
+@media (max-width: 600px) {
   .navigation {
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
+  }
+  .navigation ul {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+  .buy-ticket-button {
+    display: none;
   }
   .logo {
     width: 20%;
@@ -86,29 +107,22 @@ nav li {
     padding-top: 1rem;
   }
 }
-.logo {
-  width: 20%;
-  height: 100%;
-}
-.navigation {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+@media screen and (min-width: 800px) {
+  .logo {
+    width: 60%;
+  }
+  nav li a {
+    font-size: 20px;
+  }
+  .buy-ticket-button {
+    font-size: 20px;
+    margin-left: 2rem;
+  }
 }
 nav li a {
   text-decoration: none;
   color: var(--dark-text-color);
   padding: 14px 16px;
-  font-size: 20px;
+
   font-family: var(--secondary-font);
-}
-/* ///////////////////////////////BUY ticket Button////////////////////////////////// */
-.buy-ticket-button {
-  background-color: var(--dark-color1);
-  border: 0;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 1px 1px 10px black;
-  font-size: 22px;
-  font-family: var(--secondary-font);
-  margin-left: 4rem;
 }
