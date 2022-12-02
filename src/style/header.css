@@ -20,7 +20,7 @@
   /*background-image: radial-gradient(#f6a3e4ff, #6cc1f6ff); - makes the pink centered*/
 }
 
-h1 {
+.header_h1 {
   font-family: var(--primary-font);
   color: white;
   padding-left: 1.3rem;
@@ -28,7 +28,7 @@ h1 {
   text-align: center;
 }
 
-h3 {
+.header_h3 {
   margin: 0;
   padding-top: 9rem;
   padding-left: 1rem;
@@ -47,12 +47,12 @@ h3 {
 }
 
 @media only screen and (min-width: 600px) {
-  h1 {
+  .header_h1 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
-  h3 {
+  .header_h3 {
     padding-top: 10rem;
     padding-left: 2rem;
   }
@@ -65,14 +65,14 @@ h3 {
 }
 
 @media only screen and (min-width: 700px) {
-  h3 {
+  .header_h3 {
     padding-top: 16rem;
     padding-left: 4rem;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  h3 {
+  .header_h3 {
     padding-top: 13rem;
     padding-left: 5rem;
   }
@@ -85,7 +85,7 @@ h3 {
 }
 
 @media only screen and (min-width: 1200px) {
-  h3 {
+  .header_h3 {
     padding-top: 15rem;
     padding-left: 7rem;
   }
