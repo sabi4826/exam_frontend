@@ -1,5 +1,6 @@
 import React from "react";
 import "../src/style/schedule.css";
+import "../src/style/index.css";
 export default function Schedule() {
   return (
     <div className="schedule-section">

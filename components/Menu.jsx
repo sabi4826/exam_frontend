@@ -1,5 +1,6 @@
 import React from "react";
 import "../src/style/menu.css";
+import "../src/style/index.css";
 import Logo from "../src/assets/musiclogo.svg";
 export default function Menu() {
   return (
