@@ -1,6 +1,6 @@
 import React from "react";
 import "../src/style/booking.css";
-import "../src/style/index.css";
+// import "../src/style/index.css";
 
 export default function Booking() {
   //   function removeOne() {
