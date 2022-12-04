@@ -5,7 +5,8 @@ import Logo from "../src/assets/musiclogo.svg";
 export default function Menu() {
   return (
     <div className="navigation">
-      <img src={Logo} className="logo" alt="logo" />
+      {/* <img src={Logo} className="logo" alt="logo" /> */}
+      <h2 className="logo-text">FooFest</h2>
       <nav>
         <ul>
           <li>

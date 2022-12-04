@@ -1,0 +1,66 @@
+.booking-section {
+  background-color: #f6a3e4ff;
+  text-align: center;
+  padding: 2rem;
+}
+.ticket-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 2rem;
+}
+.booking-section h3 {
+  margin: 0;
+  /* padding: 2rem; */
+}
+.ticket-section h4 {
+  font-family: "Righteous", cursive;
+}
+.ticket-section p {
+  color: black;
+}
+.booking-ticket-button {
+  background-color: #32698b;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 1rem 3rem 1rem 3rem;
+  box-shadow: 1px 1px 10px black;
+  font-size: 22px;
+}
+#Qty {
+  margin: 0 7%;
+  border: none;
+  outline: none;
+}
+.add-cart {
+  border: none;
+  border-radius: 0;
+  background-color: #32698b;
+  color: white;
+  padding: 2% 5%;
+}
+.quantity-form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /* user-select: none; */
+}
+.quantity-form input {
+  text-align: right;
+}
+.quantity-form span {
+  position: absolute;
+}
+.remove-symbol {
+  top: 20%;
+  left: 22%;
+}
+.add-symbol {
+  top: 20%;
+  left: 41%;
+}
+.h5-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
