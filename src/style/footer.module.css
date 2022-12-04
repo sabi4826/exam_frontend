@@ -1,0 +1,64 @@
+/* //////////////custom variables///////////////////////////// */
+:root {
+  --primary-font: "Righteous", cursive;
+  --secondary-font: "Poppins", sans-serif;
+  --tertiary-font: "Rubik Glitch", cursive;
+}
+body {
+  background-color: #70d7ff;
+}
+#socials_logo {
+  width: 20%;
+}
+
+/* //////////////footer styling///////////////////////////// */
+.footer_content {
+  padding: 2.5rem;
+  line-height: 1.7rem;
+  text-align: center;
+}
+.headline_text {
+  font-size: 1.999rem;
+}
+.footer_text {
+  font-size: 1.414rem;
+}
+.contact,
+.email,
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 850px) {
+  .footer_content {
+    padding: 2rem;
+    margin: 0 2rem 0 2rem;
+    line-height: 1.5rem;
+  }
+  .footer_text {
+    font-size: 1.414rem;
+  }
+  .footer_information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .contact,
+  .email,
+  .socials {
+    padding-right: 4rem;
+  }
+  .footer_headlines {
+    display: flex;
+    padding: 2rem;
+    gap: 5rem;
+    align-items: center;
+  }
+  #socials_logo {
+    width: 40%;
+  }
+}
