@@ -34,7 +34,7 @@
   padding-left: 1rem;
 }
 
-.buy-ticket-header {
+.buyTicketHeader {
   background-color: var(--dark-color1);
   border: 0;
   border-radius: 10px;
@@ -57,7 +57,7 @@
     padding-left: 2rem;
   }
 
-  .buy-ticket-header {
+  .buyTicketHeader {
     padding: 1rem;
     margin-bottom: 5rem;
     margin-left: 30%;
@@ -77,7 +77,7 @@
     padding-left: 5rem;
   }
 
-  .buy-ticket-header {
+  .buyTicketHeader {
     padding: 1rem;
     margin-bottom: 7rem;
     margin-left: 40%;
@@ -90,7 +90,7 @@
     padding-left: 7rem;
   }
 
-  .buy-ticket-header {
+  .buyTicketHeader {
     padding: 1rem;
     margin-left: 45%;
   }
