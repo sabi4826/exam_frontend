@@ -38,12 +38,12 @@ nav li {
   display: inline;
 }
 
-.logo-text {
+.logoText {
   margin: 0;
   text-shadow: 2px 2px #e62323;
 }
 /* ///////////////////////////////BUY ticket Button////////////////////////////////// */
-.buy-ticket-button {
+.buyTicketButton {
   background-color: var(--dark-color1);
   border: 0;
   border-radius: 10px;
@@ -79,7 +79,7 @@ nav li {
     margin-left: 0px;
   }
 
-  .logo-text {
+  .logoText {
     margin-top: 1rem;
     font-size: 2.5rem;
   }
@@ -97,10 +97,10 @@ nav li {
     flex-direction: column;
     text-align: right;
   }
-  .buy-ticket-button {
+  .buyTicketButton {
     display: none;
   }
-  .logo-text {
+  .logoText {
     margin-top: 1rem;
     font-size: 2.5rem;
   }
@@ -109,7 +109,7 @@ nav li {
   nav li a {
     font-size: 20px;
   }
-  .buy-ticket-button {
+  .buyTicketButton {
     font-size: 20px;
     margin-left: 2rem;
   }

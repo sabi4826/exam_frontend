@@ -1,16 +1,16 @@
-.schedule-section {
+.scheduleSection {
   background-color: #6cc1f6;
   text-align: center;
   padding: 3rem;
 }
-.schedule-section h2 {
+.scheduleSection h2 {
   margin: 0;
   color: white;
 }
-.schedule-section h4 {
+.scheduleSection h4 {
   color: black;
 }
-.schedule-button {
+.scheduleButton {
   background-color: var(--dark-color1);
   border: 0;
   border-radius: 10px;
@@ -22,7 +22,7 @@
   /* width: 20%; */
 }
 @media (max-width: 700px) {
-  .schedule-button {
+  .scheduleButton {
     width: 30%;
   }
 }

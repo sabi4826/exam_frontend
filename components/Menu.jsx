@@ -1,12 +1,12 @@
 import React from "react";
-import "../src/style/menu.module.css";
+import menuStyles from "../src/style/menu.module.css";
 import "../src/style/index.module.css";
-import Logo from "../src/assets/musiclogo.svg";
+
 export default function Menu() {
   return (
-    <div className="navigation">
+    <div className={menuStyles.navigation}>
       {/* <img src={Logo} className="logo" alt="logo" /> */}
-      <h2 className="logo-text">FooFest</h2>
+      <h2 className={menuStyles.logoText}>FooFest</h2>
       <nav>
         <ul>
           <li>
@@ -19,7 +19,7 @@ export default function Menu() {
             <a href="#">FAQ</a>
           </li>
 
-          <button className="buy-ticket-button">BUY TICKETS</button>
+          <button className={menuStyles.buyTicketButton}>BUY TICKETS</button>
         </ul>
       </nav>
     </div>
