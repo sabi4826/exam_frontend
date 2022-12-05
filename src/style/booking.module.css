@@ -1,0 +1,132 @@
+.booking_section {
+  background-color: #f6a3e4ff;
+  text-align: center;
+  padding: 2rem;
+}
+.ticket_section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 2rem;
+}
+.booking_section h3 {
+  margin: 0;
+  /* padding: 2rem; */
+}
+.ticket_section h4 {
+  font-family: "Righteous", cursive;
+}
+.ticket_section p {
+  color: black;
+}
+.booking_ticket_button {
+  background-color: #32698b;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 1rem 3rem 1rem 3rem;
+  box-shadow: 1px 1px 10px black;
+  font-size: 22px;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+#Qty {
+  margin: 0 7%;
+  border: none;
+  outline: none;
+}
+.add_cart {
+  border: none;
+  border-radius: 0;
+  background-color: #32698b;
+  color: white;
+  padding: 2% 5%;
+}
+.quantity_form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /* user-select: none; */
+}
+.quantity_form input {
+  text-align: right;
+}
+.quantity_form span {
+  position: absolute;
+}
+.remove_symbol {
+  top: 20%;
+  left: 22%;
+}
+.add_symbol {
+  top: 20%;
+  left: 41%;
+}
+.h5_text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+.h3_text {
+  text-shadow: 2px 2px #000;
+}
+
+.form_styling {
+  border: none;
+  border-radius: 2rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-right: 5rem;
+  box-shadow: 1px 1px 10px #000;
+}
+.calc_text {
+  border: none;
+  border-radius: 2rem;
+  text-align: center;
+  width: 30rem;
+  padding-right: 5rem;
+  box-shadow: 1px 1px 10px #000;
+}
+.label_text {
+  font-family: "Righteous", cursive;
+  text-align: end;
+  margin-top: 1.2rem;
+  margin-right: 3rem;
+}
+.input_text {
+  padding: 0.8rem;
+  margin: 0.5rem;
+  width: 13rem;
+  border-radius: 10px;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  /* text-transform: uppercase; */
+}
+@media screen and (min-width: 601px) {
+  .ticket_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .h3_text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .ticket_section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .h3_text {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .ticket_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .h3_text {
+    font-size: 3rem;
+  }
+}
