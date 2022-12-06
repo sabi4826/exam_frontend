@@ -14,6 +14,10 @@ export default function TicketSection(props) {
               <Tickets key={product.id} data={product} addToCart={props.addToCart} />
             ))}
           </section>
+
+          <section>
+            <h4>Camping spots</h4>
+          </section>
         </article>
       </div>
     </>
