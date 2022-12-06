@@ -1,13 +1,12 @@
 import React from "react";
 import { useState, useRef } from "react";
-
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
 import CreditCard from "./CreditCard";
+import insertOrder from "../modules/db";
 
 export default function Booking(props) {
   const theForm = useRef(null);
-  const [showCreditCard, setShowCreditCard] = useState(false);
   const [infoCompleted, setInfoCompleted] = useState(false);
 
   async function submit(e) {
@@ -27,7 +26,7 @@ export default function Booking(props) {
     <div className={bookingStyles.booking_section}>
       <section className={bookingStyles.form_fields}>
         {infoCompleted ? (
-          <p>Go to payment</p>
+          <CreditCard />
         ) : (
           <form onSubmit={submit} ref={theForm}>
             <fieldset className={bookingStyles.form_styling}>
@@ -50,7 +49,7 @@ export default function Booking(props) {
               </label>
               <input className={bookingStyles.input_text} type="email" name="Email" required placeholder="name@mail.com"></input>
             </fieldset>
-            <button onClick={CreditCard} className={bookingStyles.booking_ticket_button}>
+            <button onClick={() => setInfoCompleted(true)}  className={bookingStyles.booking_ticket_button}>
               Go to payment
             </button>
           </form>

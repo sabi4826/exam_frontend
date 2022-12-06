@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
-
 import Booking from "./Booking";
+import insertOrder from "../modules/db";
 import bookingStyles from "../src/style/booking.module.css";
 
 export default function CreditCard(props) {
@@ -27,7 +27,7 @@ export default function CreditCard(props) {
     <div className="bookingStyles.creditSection">
       <section className="bookingStyles.creditFormFields">
         {paymentCompleted ? (
-          <p>Thank you for your purchase</p>
+          <p>Thank you for your purchase! We look forward to seeing you at FooFest!</p>
         ) : (
           <form onSubmit={submit} ref={creditCardForm}>
             <fieldset className="bookingStyles.creditFormStyling">
@@ -55,7 +55,7 @@ export default function CreditCard(props) {
               </label>
               <input className="cardsecurity" type="text" name="cardSecurity" inputMode="numeric" placeholder="CVC" maxlength="3" pattern="[0-9]{3}" required></input>
             </fieldset>
-            <button className={bookingStyles.booking_ticket_button}>Complete payment</button>
+            <button className={bookingStyles.booking_ticket_button} onClick={() => setPaymentCompleted(true)}>Complete payment</button>
           </form>
         )}
       </section>
