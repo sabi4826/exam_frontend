@@ -32,28 +32,28 @@ export default function CreditCard(props) {
           <form onSubmit={submit} ref={creditCardForm}>
             <fieldset className="bookingStyles.creditFormStyling">
               <legend>
-                <h3 className="">Credit card information</h3>
+                <h3 className={bookingStyles.h3_text}>Credit card information</h3>
               </legend>
 
               <label className="" htmlFor="creditCardNumber">
                 Insert your credit card number
               </label>
-              <input className="" type="number" name="creditCardNumber" required placeholder="Credit Card Number" pattern="[0-9]{16}"></input>
+              <input className="cardnumber" type="text" name="cardNumber" inputMode="numeric" placeholder="Credit Card Number" maxlength="16" pattern="[0-9]{16}" required></input>
 
               <label className="" htmlFor="creditCardMonth">
                 Credit card month
               </label>
-              <input className="" type="number" name="creditCardMonth" required placeholder="Month" pattern="[1-12]{2}"></input>
+              <input className="cardmonth" type="text" name="cardMonth" inputMode="numeric" placeholder="Month" maxlength="2" pattern="[0-1][0-9]" required></input>
 
               <label className="" htmlFor="creditCardYear">
                 Credit card year
               </label>
-              <input className="" type="number" name="creditCardYear" required placeholder="Year" pattern="[1-12]{2}"></input>
+              <input className="cardyear" type="text" name="cardYear" inputMode="numeric" placeholder="Year" maxlength="2" pattern="2[2-9]" required></input>
 
               <label className="" htmlFor="creditCardCvc">
                 CVC number
               </label>
-              <input className="" type="number" name="CVC" required placeholder="CVC" pattern="[0-9]{2}"></input>
+              <input className="cardsecurity" type="text" name="cardSecurity" inputMode="numeric" placeholder="CVC" maxlength="3" pattern="[0-9]{3}" required></input>
             </fieldset>
             <button className={bookingStyles.booking_ticket_button}>Complete payment</button>
           </form>
