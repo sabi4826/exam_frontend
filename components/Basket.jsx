@@ -8,12 +8,12 @@ export default function Basket(props) {
   const [showBasket, setBasket] = useState(false);
 
   function getTotal() {
+    let purchaseTotal = 0;
     let total = 0;
-    //     // make sure there's a "cart" somewhere:
     props.cart.forEach((item) => {
-      total += item.amount * item.price + 99;
-      //     // do we have an item?
+      purchaseTotal += item.amount * item.price;
     });
+    total = purchaseTotal + 99;
     return total;
   }
 
@@ -30,8 +30,6 @@ export default function Basket(props) {
         ))}
         <p>Booking fee: 99,-</p>
         <h3>Total: {getTotal()},-</h3>
-        {/* {!showBasket && <button onClick={() => setBasket(true)}>Buy now</button>} */}
-        {/* {showBasket && <Booking cart={props.cart} />} */}
         {!showForm && (
           <button onClick={() => setShowForm(true)} className={bookingStyles.booking_ticket_button}>
             BUY TICKETS
@@ -40,6 +38,5 @@ export default function Basket(props) {
         {showForm && <Booking />}
       </section>
     </article>
-    // Check: do/can we call each thing an "item"? Can we use "amount" and "price"? Can we use "name" instead of "id"?
   );
 }
