@@ -1,4 +1,5 @@
 import bookingStyles from "../src/style/booking.module.css";
+
 function Tickets(props) {
   //   console.log(props);
   function add() {
