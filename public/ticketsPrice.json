@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Regular Ticket",
+    "id": "0",
+    "price": "799"
+  },
+  {
+    "name": "VIP Ticket",
+    "id": "1",
+    "price": "1299"
+  },
+  {
+    "name": "Green Camping",
+    "id": "2",
+    "price": "249"
+  },
+  {
+    "name": "2 Person Tent",
+    "id": "3",
+    "price": "299"
+  },
+  {
+    "name": "3 Person Tent",
+    "id": "4",
+    "price": "399"
+  },
+  {
+    "name": "Have Crew Set Up Your Own Tent",
+    "id": "5",
+    "price": "0"
+  }
+]
