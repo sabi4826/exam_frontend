@@ -1,6 +1,7 @@
 import Tickets from "./Tickets";
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
+
 export default function TicketSection(props) {
   // console.log(props.products);
   return (
@@ -12,6 +13,10 @@ export default function TicketSection(props) {
             {props.products.map((product) => (
               <Tickets key={product.id} data={product} addToCart={props.addToCart} />
             ))}
+          </section>
+
+          <section>
+            <h4>Camping spots</h4>
           </section>
         </article>
       </div>

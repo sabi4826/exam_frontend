@@ -11,7 +11,7 @@ export default function Basket(props) {
     let total = 0;
     //     // make sure there's a "cart" somewhere:
     props.cart.forEach((item) => {
-      total += item.amount * item.price;
+      total += item.amount * item.price + 99;
       //     // do we have an item?
     });
     return total;
@@ -28,7 +28,7 @@ export default function Basket(props) {
             </button>
           </h5>
         ))}
-
+        <p>Booking fee: 99,-</p>
         <h3>Total: {getTotal()},-</h3>
         {/* {!showBasket && <button onClick={() => setBasket(true)}>Buy now</button>} */}
         {/* {showBasket && <Booking cart={props.cart} />} */}
