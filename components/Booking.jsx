@@ -3,9 +3,11 @@ import { useState, useRef } from "react";
 
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
+import CreditCard from "./CreditCard";
 
 export default function Booking(props) {
   const theForm = useRef(null);
+  const [showCreditCard, setShowCreditCard] = useState(false);
   const [infoCompleted, setInfoCompleted] = useState(false);
 
   async function submit(e) {
@@ -48,7 +50,9 @@ export default function Booking(props) {
               </label>
               <input className={bookingStyles.input_text} type="email" name="Email" required placeholder="name@mail.com"></input>
             </fieldset>
-            <button className={bookingStyles.booking_ticket_button}>Go to payment</button>
+            <button onClick={CreditCard} className={bookingStyles.booking_ticket_button}>
+              Go to payment
+            </button>
           </form>
         )}
       </section>

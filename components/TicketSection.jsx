@@ -1,6 +1,7 @@
 import Tickets from "./Tickets";
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
+
 export default function TicketSection(props) {
   // console.log(props.products);
   return (
