@@ -1,12 +1,20 @@
 import React from "react";
+/* import {insertOrder} from '../modules/db'; */
 import { useState, useRef } from "react";
-import Booking from "./Booking";
-import insertOrder from "../modules/db";
 import bookingStyles from "../src/style/booking.module.css";
 
 export default function CreditCard(props) {
   const creditCardForm = useRef(null);
   const [paymentCompleted, setPaymentCompleted] = useState(false);
+
+  // tried to make the focus jump automatically to the next field, but it's not working: 
+/*   let input = document.querySelectorAll("input");
+  input.forEach((el) => {
+
+    el.addEventListener("input", (e) => {
+      if (e.target.value.length === e.target.maxLength) {e.target.nextElementSibling.focus();}
+    });
+  }); */
 
   async function submit(e) {
     e.preventDefault();
@@ -20,7 +28,9 @@ export default function CreditCard(props) {
 
       cvcNumber: creditCardForm.elements.cvcNumber.value,
     });
-    setPaymentCompleted(true);
+    if(response && response.length) {
+      setPaymentCompleted(true);
+  }
   }
 
   return (
@@ -36,24 +46,24 @@ export default function CreditCard(props) {
               </legend>
 
               <label className="" htmlFor="creditCardNumber">
-                Insert your credit card number
+                Insert your credit card number:
               </label>
-              <input className="cardnumber" type="text" name="cardNumber" inputMode="numeric" placeholder="Credit Card Number" maxlength="16" pattern="[0-9]{16}" required></input>
+              <input className="cardnumber" type="text" name="cardNumber" inputMode="numeric" placeholder="Credit Card Number" maxLength="16" pattern="[0-9]{16}" required></input>
 
               <label className="" htmlFor="creditCardMonth">
-                Credit card month
+                Credit card month:
               </label>
-              <input className="cardmonth" type="text" name="cardMonth" inputMode="numeric" placeholder="Month" maxlength="2" pattern="[0-1][0-9]" required></input>
+              <input className="cardmonth" type="text" name="cardMonth" inputMode="numeric" placeholder="Month" maxLength="2" pattern="[0-1][0-9]" required></input>
 
               <label className="" htmlFor="creditCardYear">
-                Credit card year
+                Credit card year:
               </label>
-              <input className="cardyear" type="text" name="cardYear" inputMode="numeric" placeholder="Year" maxlength="2" pattern="2[2-9]" required></input>
+              <input className="cardyear" type="text" name="cardYear" inputMode="numeric" placeholder="Year" maxLength="2" pattern="2[2-9]" required></input>
 
               <label className="" htmlFor="creditCardCvc">
-                CVC number
+                CVC number:
               </label>
-              <input className="cardsecurity" type="text" name="cardSecurity" inputMode="numeric" placeholder="CVC" maxlength="3" pattern="[0-9]{3}" required></input>
+              <input className="cardsecurity" type="text" name="cardSecurity" inputMode="numeric" placeholder="CVC" maxLength="3" pattern="[0-9]{3}" required></input>
             </fieldset>
             <button className={bookingStyles.booking_ticket_button} onClick={() => setPaymentCompleted(true)}>Complete payment</button>
           </form>
