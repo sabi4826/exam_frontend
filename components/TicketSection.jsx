@@ -1,5 +1,5 @@
 import Tickets from "./Tickets";
-// import CampingArea from "./CampingArea";
+import Camping from "./Camping";
 
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
@@ -20,6 +20,7 @@ export default function TicketSection(props) {
           <section className={bookingStyles.ticket_section}>
             <h4>Camping spots</h4>
             <p>Check out the avaliable camping spots here</p>
+            <Camping />
             {/* {props.campingSpots.map((spots) => (
               <CampingArea data={spots} addToCart={props.addToCart} />
             ))} */}

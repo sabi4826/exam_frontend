@@ -16,10 +16,12 @@ export default function Booking(props) {
 
       email: theForm.current.elements.email.value,
 
-      address: theForm.current.elements.address.value,
+      phone: theForm.current.elements.phone.value,
 
       basket: props.cart,
+      
     });
+    console.log(response);
     setInfoCompleted(true);
   }
   return (
@@ -28,28 +30,28 @@ export default function Booking(props) {
         {infoCompleted ? (
           <CreditCard />
         ) : (
-          <form onSubmit={submit} ref={theForm}>
+          <form method="post" onSubmit={submit} ref={theForm}>
             <fieldset className={bookingStyles.form_styling}>
               <legend>
                 <h3 className={bookingStyles.h3_text}>Personal Information</h3>
               </legend>
 
-              <label className={bookingStyles.label_text} htmlFor="fullname">
+              <label className={bookingStyles.label_text} htmlFor="name">
                 Name:
               </label>
-              <input className={bookingStyles.input_text} type="text" name="Fullname" required placeholder="Full Name"></input>
+              <input className={bookingStyles.input_text} type="text" name="name" required placeholder="Full Name"></input>
 
               <label className={bookingStyles.label_text} htmlFor="phone">
                 Phone:
               </label>
-              <input className={bookingStyles.input_text} type="number" name="Phone" required placeholder="ex.1234556"></input>
+              <input className={bookingStyles.input_text} type="tel" inputMode="numeric" name="phone" required placeholder="ex.1234556"></input>
 
               <label className={bookingStyles.label_text} htmlFor="email">
                 E-mail:
               </label>
-              <input className={bookingStyles.input_text} type="email" name="Email" required placeholder="name@mail.com"></input>
+              <input className={bookingStyles.input_text} type="email" name="email" required placeholder="name@mail.com"></input>
             </fieldset>
-            <button onClick={() => setInfoCompleted(true)}  className={bookingStyles.booking_ticket_button}>
+            <button type="submit" className={bookingStyles.booking_ticket_button}>
               Go to payment
             </button>
           </form>
