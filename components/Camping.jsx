@@ -6,6 +6,7 @@ export default function Camping(props) {
   function add() {
     props.addToCart(props.response);
   }
+
   return (
     <article>
       <h4>{props.response.area}</h4>

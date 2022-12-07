@@ -4,6 +4,7 @@ import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
 
 export default function TicketSection(props) {
+
   return (
     <>
         <article>

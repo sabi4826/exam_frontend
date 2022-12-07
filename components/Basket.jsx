@@ -1,15 +1,16 @@
 import { useState } from "react";
 import Booking from "./Booking";
+import App from "../src/App";
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
 
 export default function Basket(props) {
   const [showForm, setShowForm] = useState(false);
-  const [showBasket, setBasket] = useState(false);
 
   function getTotal() {
     let purchaseTotal = 0;
     let total = 0;
+    
     props.cart.forEach((item) => {
       purchaseTotal += item.amount * item.price;
     });
@@ -20,9 +21,9 @@ export default function Basket(props) {
   return (
     <article>
       <section className={bookingStyles.calc_text}>
-        {props.cart.map((item) => (
+         {props.cart.map((item) => (
           <h5 className={bookingStyles.h5_text} key={item.id}>
-            {item.name} : {item.amount}, Price:{item.amount * item.price}
+            {item.name} : {item.amount}, Price: {item.amount * item.price}
             <button className={bookingStyles.close_button} onClick={() => props.removeFromCart(item.name)}>
               X
             </button>
