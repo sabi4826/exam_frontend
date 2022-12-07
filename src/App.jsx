@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
@@ -11,17 +10,17 @@ import TicketSection from "../components/TicketSection";
 import bookingStyles from "../src/style/booking.module.css";
 function App() {
   const [products, setProducts] = useState([]);
-  const [camping, setCamping] = useState({});
+  const [camping, setCamping] = useState([]);
   const [cart, setCart] = useState([]);
 
-  function addToCart(data) {
+  function addToCart(data, response) {
     // console.log("addToCart", data);
     // do we have the ticket
-    if (cart.find((entry) => entry.id === data.id)) {
-      // console.log("its there");
+    if (cart.find((entry) => entry.id === data.id || camping.area)) {
+     /*  console.log("its there"); */
       setCart((oldCart) =>
         oldCart.map((entry) => {
-          if (entry.id !== data.id) {
+          if (entry.id !== data.id || camping.area) {
             return entry;
           }
           const copy = { ...entry };
@@ -30,7 +29,7 @@ function App() {
         })
       );
     } else {
-      setCart((oldCart) => oldCart.concat({ ...data, amount: 1 }));
+      setCart((oldCart) => oldCart.concat({ ...data, ...response, amount: 1 }));
     }
   }
 
@@ -53,6 +52,7 @@ function App() {
   }
 
   useEffect(() => {
+    // fetch tickets from local json file:
     async function getData() {
       const res = await fetch("ticketsPrice.json");
       const data = await res.json();
@@ -61,18 +61,19 @@ function App() {
     }
     getData();
 
+    // all fetching in same useEffect, we can only have one
+
+    // fetch camping available spots:
     async function fetchCamping() {
-      // FROM INSOMNIA:
       
       fetch('http://localhost:8080/available-spots')
         .then(response => response.json())
-        .then(response => {console.log(response)
-          setCamping(response);})
+        .then(response => {setCamping(response)})
         .catch(err => console.error(err));
-      
       }
       fetchCamping();
-  }, []);
+  }
+  );
  
 
   return (

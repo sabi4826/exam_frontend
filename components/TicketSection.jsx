@@ -1,12 +1,11 @@
 import Tickets from "./Tickets";
+import Camping from "./Camping";
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
 
 export default function TicketSection(props) {
   return (
     <>
-      {/* <h3 className={bookingStyles.h3_text}>TICKETS</h3> */}
-      <div>
         <article>
           <section className={bookingStyles.ticket_section}>
             {props.products.map((product) => (
@@ -14,16 +13,14 @@ export default function TicketSection(props) {
             ))}
           </section>
           
-          <section className={bookingStyles.camping_section}> {/* made new className */}
+          <section className={bookingStyles.ticket_section}>
             <h4>Camping spots</h4>
-            <p>Check out the available camping spots here</p>
-         {/* {O(Camping.response)((spots) => (
-              <Camping response={spots} addToCart={props.addToCart} />
-            ))}  */}
-          {/*   <Camping /> */}
+            <p>Only choose one area per booking!</p>
+            {props.camping.map((camping) => (
+              <Camping key={camping.area} response={camping} addToCart={props.addToCart} />
+            ))}
           </section>
         </article>
-      </div>
     </>
   );
 }
