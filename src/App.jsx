@@ -61,18 +61,17 @@ function App() {
     }
     getData();
 
-    async function Camping() {
+    async function fetchCamping() {
       // FROM INSOMNIA:
-      const options = {method: 'GET', headers: {'Content-type': 'application/json'}, body: 'false'};
       
-      fetch('http://localhost:8080/available-spots', options)
+      fetch('http://localhost:8080/available-spots')
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(response => {console.log(response)
+          setCamping(response);})
         .catch(err => console.error(err));
       
-       setCamping(response);
       }
-      Camping();
+      fetchCamping();
   }, []);
  
 

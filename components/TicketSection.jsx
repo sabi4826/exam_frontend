@@ -1,5 +1,4 @@
 import Tickets from "./Tickets";
-import Camping from "./Camping";
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
 
@@ -18,7 +17,7 @@ export default function TicketSection(props) {
           <section className={bookingStyles.camping_section}> {/* made new className */}
             <h4>Camping spots</h4>
             <p>Check out the available camping spots here</p>
-         {/* {Object.values(Camping.response)((spots) => (
+         {/* {O(Camping.response)((spots) => (
               <Camping response={spots} addToCart={props.addToCart} />
             ))}  */}
           {/*   <Camping /> */}
