@@ -11,6 +11,7 @@ import TicketSection from "../components/TicketSection";
 import bookingStyles from "../src/style/booking.module.css";
 function App() {
   const [products, setProducts] = useState([]);
+  const [camping, setCamping] = useState({});
   const [cart, setCart] = useState([]);
 
   function addToCart(data) {
@@ -59,7 +60,22 @@ function App() {
       setProducts(data);
     }
     getData();
+
+    async function Camping() {
+      // FROM INSOMNIA:
+      const options = {method: 'GET', headers: {'Content-type': 'application/json'}, body: 'false'};
+      
+      fetch('http://localhost:8080/available-spots', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+      
+       setCamping(response);
+      }
+      Camping();
   }, []);
+ 
+
   return (
     <div className="App">
       <Menu />
@@ -67,8 +83,8 @@ function App() {
       <Schedule />
 
       <section className={bookingStyles.booking_section}>
-        <TicketSection products={products} addToCart={addToCart} />
-        <Basket products={products} cart={cart} removeFromCart={removeFromCart} />
+        <TicketSection products={products} camping={camping} addToCart={addToCart} />
+        <Basket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} />
       </section>
 
       <Footer />

@@ -21,7 +21,7 @@ export default function TicketSection(props) {
          {/* {Object.values(Camping.response)((spots) => (
               <Camping response={spots} addToCart={props.addToCart} />
             ))}  */}
-            <Camping />
+          {/*   <Camping /> */}
           </section>
         </article>
       </div>
