@@ -75,14 +75,14 @@ nav li {
   nav li a {
     font-size: 15px;
   }
-  .buy-ticket-button {
+  .buyTicketButton {
     font-size: 1rem;
     margin-left: 0px;
   }
 
   .logoText {
     margin-top: 1rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 
@@ -103,7 +103,7 @@ nav li {
   }
   .logoText {
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 3rem;
   }
 }
 @media screen and (min-width: 800px) {
@@ -115,7 +115,7 @@ nav li {
     margin-left: 2rem;
   }
   .logoText {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 nav li a {

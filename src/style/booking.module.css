@@ -84,18 +84,19 @@
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-right: 5rem;
+
+  /* padding-right: 5rem; */
   /* box-shadow: 1px 1px 10px #000; */
 }
 .calc_text {
   border: none;
   border-radius: 2rem;
-  text-align: start;
+  text-align: center;
   /* height: 35rem; */
   padding-left: 5rem;
   padding: 1rem;
   box-shadow: 1px 1px 10px #000;
-  margin: 3rem 2rem 1rem 1rem;
+  margin: 3rem 2rem 1rem 2rem;
 }
 .calc_text_h4 {
   font-size: 1.5rem;
@@ -108,9 +109,9 @@
 }
 .label_text {
   font-family: "Righteous", cursive;
-  text-align: end;
+  text-align: center;
   margin-top: 1.2rem;
-  margin-right: 3rem;
+  /* margin-right: 2rem; */
 }
 .input_text {
   padding: 0.8rem;
@@ -119,6 +120,7 @@
   border-radius: 10px;
   letter-spacing: 0.05rem;
   font-weight: 500;
+  /* margin-right: 6rem; */
   /* text-transform: uppercase; */
 }
 @media screen and (min-width: 601px) {
