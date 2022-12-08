@@ -10,7 +10,7 @@ export default function Basket(props) {
   function getTotal() {
     let purchaseTotal = 0;
     let total = 0;
-    
+
     props.cart.forEach((item) => {
       purchaseTotal += item.amount * item.price;
     });
@@ -21,7 +21,7 @@ export default function Basket(props) {
   return (
     <article>
       <section className={bookingStyles.calc_text}>
-         {props.cart.map((item) => (
+        {props.cart.map((item) => (
           <h5 className={bookingStyles.h5_text} key={item.id}>
             {item.name} : {item.amount}, Price: {item.amount * item.price}
             <button className={bookingStyles.close_button} onClick={() => props.removeFromCart(item.name)}>
@@ -29,7 +29,7 @@ export default function Basket(props) {
             </button>
           </h5>
         ))}
-        <p>Booking fee: 99,-</p>
+        <p className={bookingStyles.bookingFee}>Booking fee: 99,-</p>
         <h3>Total: {getTotal()},-</h3>
         {!showForm && (
           <button onClick={() => setShowForm(true)} className={bookingStyles.booking_ticket_button}>

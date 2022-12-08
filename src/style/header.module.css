@@ -41,9 +41,10 @@
   padding: 1rem;
   margin-bottom: 4rem;
   box-shadow: 2px 2px 15px black;
-  font-size: 1.999rem; /* used the size from H4 */
+  font-size: 1.414rem; /* used the size from H4 */
   font-family: var(--secondary-font);
   margin-left: 25%;
+  inset: 0 0 0 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -60,7 +61,7 @@
   .buyTicketHeader {
     padding: 1rem;
     margin-bottom: 5rem;
-    margin-left: 30%;
+    margin-left: 40%;
   }
 }
 
