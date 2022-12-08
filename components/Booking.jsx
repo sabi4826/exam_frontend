@@ -19,13 +19,12 @@ export default function Booking(props) {
       phone: theForm.current.elements.phone.value,
 
       basket: props.cart,
-      
     });
     console.log(response);
     setInfoCompleted(true);
   }
   return (
-    <div className={bookingStyles.booking_section}>
+    <div className={bookingStyles.form_section}>
       <section className={bookingStyles.form_fields}>
         {infoCompleted ? (
           <CreditCard />

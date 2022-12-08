@@ -1,0 +1,19 @@
+.camping_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: "Righteous", cursive;
+  text-shadow: 2px 2px #000;
+  margin-bottom: 3rem;
+}
+.camping_heading {
+  margin-top: 5rem;
+}
+.camping_h4 {
+  font-family: "Righteous", cursive;
+  text-shadow: 2px 2px #000;
+}
+.camping_p {
+  color: black;
+  font-size: 1.99rem;
+  text-shadow: none;
+}
