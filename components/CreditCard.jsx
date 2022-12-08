@@ -1,11 +1,12 @@
 import React from "react";
 /* import {insertOrder} from '../modules/db'; */
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import bookingStyles from "../src/style/booking.module.css";
 
 export default function CreditCard(props) {
   const creditCardForm = useRef(null);
   const [paymentCompleted, setPaymentCompleted] = useState(false);
+  const [finalCamping, setFinalCamping] = useState([]);
 
   // tried to make the focus jump automatically to the next field, but it's not working: 
 /*   let input = document.querySelectorAll("input");
@@ -30,14 +31,34 @@ export default function CreditCard(props) {
     });
     if(response && response.length) {
       setPaymentCompleted(true);
+      FinalSpotBooking(); // calling function to put POST request
   }
   }
+  
+  useEffect(() => {
+    async function FinalSpotBooking() {
+      const finalOptions = {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', prefer: 'return=representation'},
+        body: '{"id":{options.id}}' // how do we reference the id?
+      };
+      
+      fetch('http://localhost:8080/fullfill-reservation', finalOptions)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        // set state setFinalCamping to "response" in last "then" after checked console.log!!!
+        .catch(err => console.error(err));
+      
+    }
+    FinalSpotBooking();
+  })
 
   return (
     <div className="bookingStyles.creditSection">
       <section className="bookingStyles.creditFormFields">
         {paymentCompleted ? (
           <p>Thank you for your purchase! We look forward to seeing you at FooFest!</p>
+          // should the function call for POST request be here, when the purchase is done??!! And then the function further up.
         ) : (
           <form onSubmit={submit} ref={creditCardForm}>
             <fieldset className="bookingStyles.creditFormStyling">
