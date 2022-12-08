@@ -13,7 +13,7 @@ function App() {
   const [camping, setCamping] = useState([]);
   const [cart, setCart] = useState([]);
 
-  function addToCart(data, response) {
+  function addToCart(data) {
     // console.log("addToCart", data);
     // do we have the ticket
     if (cart.find((entry) => entry.id === data.id || camping.area)) {
@@ -29,7 +29,7 @@ function App() {
         })
       );
     } else {
-      setCart((oldCart) => oldCart.concat({ ...data, ...response, amount: 1 }));
+      setCart((oldCart) => oldCart.concat({ ...data, amount: 1 }));
     }
   }
 
