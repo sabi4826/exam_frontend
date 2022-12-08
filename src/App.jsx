@@ -6,6 +6,7 @@ import Schedule from "../components/Schedule";
 import Booking from "../components/Booking";
 import Basket from "../components/Basket";
 import TicketSection from "../components/TicketSection";
+import CampingBasket from "../components/CampingBasket";
 
 import bookingStyles from "../src/style/booking.module.css";
 function App() {
@@ -17,7 +18,7 @@ function App() {
     // console.log("addToCart", data);
     // do we have the ticket
     if (cart.find((entry) => entry.id === data.id || camping.area)) {
-     /*  console.log("its there"); */
+      /*  console.log("its there"); */
       setCart((oldCart) =>
         oldCart.map((entry) => {
           if (entry.id !== data.id || camping.area) {
@@ -65,16 +66,15 @@ function App() {
 
     // fetch camping available spots:
     async function fetchCamping() {
-      
-      fetch('http://localhost:8080/available-spots')
-        .then(response => response.json())
-        .then(response => {setCamping(response)})
-        .catch(err => console.error(err));
-      }
-      fetchCamping();
-  }
-  );
- 
+      fetch("http://localhost:8080/available-spots")
+        .then((response) => response.json())
+        .then((response) => {
+          setCamping(response);
+        })
+        .catch((err) => console.error(err));
+    }
+    fetchCamping();
+  });
 
   return (
     <div className="App">
@@ -84,6 +84,7 @@ function App() {
 
       <section className={bookingStyles.booking_section}>
         <TicketSection products={products} camping={camping} addToCart={addToCart} />
+        {/* <CampingBasket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} /> */}
         <Basket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} />
       </section>
 
