@@ -8,6 +8,7 @@ import Basket from "../components/Basket";
 import TicketSection from "../components/TicketSection";
 
 import bookingStyles from "../src/style/booking.module.css";
+import BookingH2 from "../components/BookingH2";
 function App() {
   const [products, setProducts] = useState([]);
   const [camping, setCamping] = useState([]);
@@ -17,7 +18,7 @@ function App() {
     // console.log("addToCart", data);
     // do we have the ticket
     if (cart.find((entry) => entry.id === data.id || camping.area)) {
-     /*  console.log("its there"); */
+      /*  console.log("its there"); */
       setCart((oldCart) =>
         oldCart.map((entry) => {
           if (entry.id !== data.id || camping.area) {
@@ -65,23 +66,22 @@ function App() {
 
     // fetch camping available spots:
     async function fetchCamping() {
-      
-      fetch('http://localhost:8080/available-spots')
-        .then(response => response.json())
-        .then(response => {setCamping(response)})
-        .catch(err => console.error(err));
-      }
-      fetchCamping();
-  }
-  );
- 
+      fetch("http://localhost:8080/available-spots")
+        .then((response) => response.json())
+        .then((response) => {
+          setCamping(response);
+        })
+        .catch((err) => console.error(err));
+    }
+    fetchCamping();
+  });
 
   return (
     <div className="App">
       <Menu />
       <Header />
       <Schedule />
-
+      <BookingH2 />
       <section className={bookingStyles.booking_section}>
         <TicketSection products={products} camping={camping} addToCart={addToCart} />
         <Basket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} />

@@ -14,12 +14,10 @@
   background-color: var(--dark-color1);
   border: 0;
   border-radius: 10px;
-  padding: 1rem 3rem 1rem 3rem;
-  box-shadow: 1px 1px 10px black;
-  font-size: 22px;
+  padding: 1rem;
+  box-shadow: 2px 2px 15px black;
+  font-size: 1.414rem;
   font-family: var(--secondary-font);
-  margin-left: 4rem;
-  /* width: 20%; */
-}
-@media (max-width: 700px) {
+  /* margin-left: 4rem; */
+  inset: 0 0 0 0;
 }
