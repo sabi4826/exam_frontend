@@ -30,8 +30,7 @@ export default function Basket(props) {
             </button>
           </h5>
         ))}
-
-        <p>Booking fee: 99,-</p>
+        <p className={bookingStyles.bookingFee}>Booking fee: 99,-</p>
         <h3>Total: {getTotal()},-</h3>
         {!showForm && (
           <button onClick={() => setShowForm(true)} className={bookingStyles.booking_ticket_button}>

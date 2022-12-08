@@ -9,6 +9,7 @@ import TicketSection from "../components/TicketSection";
 import CampingBasket from "../components/CampingBasket";
 
 import bookingStyles from "../src/style/booking.module.css";
+import BookingH2 from "../components/BookingH2";
 function App() {
   const [products, setProducts] = useState([]);
   const [camping, setCamping] = useState([]);
@@ -81,7 +82,7 @@ function App() {
       <Menu />
       <Header />
       <Schedule />
-
+      <BookingH2 />
       <section className={bookingStyles.booking_section}>
         <TicketSection products={products} camping={camping} addToCart={addToCart} />
         {/* <CampingBasket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} /> */}
