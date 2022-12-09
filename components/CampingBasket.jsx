@@ -5,7 +5,7 @@ import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
 
 export default function CampingBasket(props) {
-  console.log(props);
+  // console.log(props);
 
   return (
     <article>

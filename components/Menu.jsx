@@ -6,7 +6,10 @@ export default function Menu() {
   return (
     <div className={menuStyles.navigation}>
       {/* <img src={Logo} className="logo" alt="logo" /> */}
-      <h2 className={menuStyles.logoText}>FooFest</h2>
+      <a href="index.html">
+        {" "}
+        <h2 className={menuStyles.logoText}>FooFest</h2>
+      </a>
       <nav>
         <ul>
           <li>

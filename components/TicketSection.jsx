@@ -9,19 +9,25 @@ export default function TicketSection(props) {
     <>
       <article>
         <aside className={campingStyles.camping_heading}>
-          <h4 className={campingStyles.camping_h4}>Camping spots</h4>
+          <h3 className={campingStyles.camping_h3}>Camping spots</h3>
           {/* <p className={campingStyles.camping_p}>Only choose one area per booking!</p> */}
         </aside>
         <section className={campingStyles.camping_container}>
           {props.camping.map((camping) => (
-            <Camping key={camping.area} response={camping} addToCart={props.addToCart} />
+            <Camping key={camping.area} response={camping} />
           ))}
         </section>
-        <section className={bookingStyles.ticket_section}>
-          {props.products.map((product) => (
-            <Tickets key={product.id} data={product} addToCart={props.addToCart} />
-          ))}
-        </section>
+        <div>
+          <aside className={campingStyles.camping_heading}>
+            <h3 className={campingStyles.camping_h3}>Tickets</h3>
+            <p className={campingStyles.camping_p}>Tickets and extras</p>
+          </aside>
+          <section className={bookingStyles.ticket_section}>
+            {props.products.map((product) => (
+              <Tickets key={product.id} data={product} addToCart={props.addToCart} />
+            ))}
+          </section>
+        </div>
       </article>
     </>
   );

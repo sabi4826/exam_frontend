@@ -1,10 +1,15 @@
 .articleSection {
   padding: 0rem;
 }
-.bookingH2 {
+.bookingH2_div {
   text-align: center;
+  background-color: #f6a3e4ff;
+  padding: 2rem;
 }
-
+.bookingH2 {
+  margin: 0;
+  text-shadow: 2px 2px #e62323;
+}
 .booking_section {
   display: grid;
   grid-template-columns: 60% 40%;
@@ -16,6 +21,7 @@
   grid-template-columns: 70% 30%;
   background-color: #f6a3e4ff;
   text-align: center;
+  padding: 1rem;
 }
 .ticket_container {
   display: grid;
@@ -104,6 +110,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.creditFormStyling {
+  border: none;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .calc_text {
   border: none;
   border-radius: 2rem;
@@ -127,9 +139,9 @@
 }
 .label_text {
   font-family: "Righteous", cursive;
-  text-align: center;
+  text-align: end;
   margin-top: 1.2rem;
-  /* margin-right: 2rem; */
+  margin-right: 2rem;
 }
 .input_text {
   padding: 0.8rem;
@@ -138,10 +150,33 @@
   border-radius: 10px;
   letter-spacing: 0.05rem;
   font-weight: 500;
+
   /* margin-right: 6rem; */
   /* text-transform: uppercase; */
 }
 @media screen and (min-width: 601px) {
+  .booking_container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .booking_section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .ticket_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .h3_text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .booking_container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
   .booking_section {
     display: grid;
     grid-template-columns: 1fr;
@@ -151,24 +186,45 @@
     grid-template-columns: 1fr 1fr;
   }
   .h3_text {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .booking_section {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .ticket_section {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .h3_text {
     font-size: 1.7rem;
+  }
+  .form_styling {
+    border: none;
+    text-align: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 1rem;
+  }
+  .creditFormStyling {
+    border: none;
+    text-align: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 1rem;
+  }
+  .label_text {
+    font-family: "Righteous", cursive;
+    text-align: left;
+    margin-top: 1.2rem;
+    margin-right: 2rem;
+  }
+  .input_text {
+    padding: 0.8rem;
+    margin: 0.5rem;
+    /* width: 13rem; */
+    border-radius: 10px;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+
+    /* margin-right: 6rem; */
+    /* text-transform: uppercase; */
   }
 }
 @media screen and (min-width: 850px) {
+  /* .booking_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  } */
   .booking_section {
     display: grid;
     grid-template-columns: 1fr 1fr;

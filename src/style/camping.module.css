@@ -1,20 +1,45 @@
 .camping_container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   font-family: "Righteous", cursive;
   text-shadow: 2px 2px #000;
   margin-bottom: 3rem;
 }
-/* .camping_heading {
-  margin-top: 5rem;
-} */
 .camping_h4 {
+  margin-bottom: 0.5rem;
+}
+
+.camping_h3 {
   font-family: "Righteous", cursive;
   text-shadow: 2px 2px #000;
-  font-size: 2rem;
+  margin: 1rem;
 }
 .camping_p {
   color: black;
   font-size: 1rem;
   text-shadow: none;
+}
+@media (max-width: 600px) {
+  .camping_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 601px) {
+  .camping_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 850px) {
+  .camping_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .camping_container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
