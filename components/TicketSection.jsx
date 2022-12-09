@@ -9,12 +9,11 @@ export default function TicketSection(props) {
     <>
       <article>
         <aside className={campingStyles.camping_heading}>
-          <h3 className={campingStyles.camping_h3}>Camping spots</h3>
-          {/* <p className={campingStyles.camping_p}>Only choose one area per booking!</p> */}
+          <h4 className={campingStyles.camping_h4}>Camping spots</h4>
         </aside>
         <section className={campingStyles.camping_container}>
           {props.camping.map((camping) => (
-            <Camping key={camping.area} response={camping} />
+            <Camping key={camping.area} response={camping.available} addToCart={props.addToCart} />
           ))}
         </section>
         <div>
