@@ -12,10 +12,6 @@ export default function Basket(props) {
     let total = 0;
 
     props.cart.forEach((item) => {
-<<<<<<< HEAD
-      // console.log("item is:", item);
-=======
->>>>>>> origin/sabine's-branch
       purchaseTotal += item.amount * item.price;
     });
     total = purchaseTotal + 99;
