@@ -4,13 +4,9 @@ import { useState, useEffect } from "react";
 //in App.jsx our fetched data is called response, so that is used everywhere with camping spots.
 
 export default function Camping(props) {
-<<<<<<< HEAD
   const [reserveCamping, setReserveCamping] = useState([]);
 
   function add() {
-=======
-const [reserveCamping, setReserveCamping] = useState([]);
->>>>>>> sabine's-branch
     // I think it makes sense to call the PUT request here, when the spots are added to basket:
 
     async function reserveSpot() {
@@ -29,8 +25,7 @@ const [reserveCamping, setReserveCamping] = useState([]);
       .catch(err => console.error(err));
     }; 
     reserveSpots();
-  }
-  );  
+  };  
  
 };
 
@@ -41,16 +36,9 @@ const [reserveCamping, setReserveCamping] = useState([]);
       <h4 className={campingStyles.camping_h4}>{props.response.area}</h4>
       {/* <p className={campingStyles.camping_p}>Spots: {props.response.spots}</p> */}
       <p className={campingStyles.camping_p}>Available: {props.response.available}</p>
-<<<<<<< HEAD
       <input type="radio" name="camping" onClick={add}></input>
       {/* <button onClick={add} className={bookingStyles.add_cart}>
-=======
-      <p>0,-</p>
-
-      <button onClick={reserveSpot} className={bookingStyles.add_cart}>
->>>>>>> sabine's-branch
         Add to Cart
       </button> */}
     </article>
   );
-}
