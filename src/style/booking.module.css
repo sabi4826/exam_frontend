@@ -11,6 +11,12 @@
   background-color: #f6a3e4ff;
   text-align: center;
 }
+.booking_container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  background-color: #f6a3e4ff;
+  text-align: center;
+}
 .ticket_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -169,7 +175,7 @@
   }
   .ticket_section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .h3_text {
     font-size: 3rem;

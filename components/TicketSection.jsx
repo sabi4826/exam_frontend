@@ -3,6 +3,7 @@ import Camping from "./Camping";
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
 import campingStyles from "../src/style/camping.module.css";
+import BookingH2 from "./BookingH2";
 export default function TicketSection(props) {
   return (
     <>
@@ -13,7 +14,7 @@ export default function TicketSection(props) {
         </aside>
         <section className={campingStyles.camping_container}>
           {props.camping.map((camping) => (
-            <Camping key={camping.area} response={camping.available} addToCart={props.addToCart} />
+            <Camping key={camping.area} response={camping} addToCart={props.addToCart} />
           ))}
         </section>
         <section className={bookingStyles.ticket_section}>

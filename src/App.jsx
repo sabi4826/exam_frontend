@@ -83,7 +83,7 @@ function App() {
       <Header />
       <Schedule />
       <BookingH2 />
-      <section className={bookingStyles.booking_section}>
+      <section className={bookingStyles.booking_container}>
         <TicketSection products={products} camping={camping} addToCart={addToCart} />
         {/* <CampingBasket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} /> */}
         <Basket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} />
