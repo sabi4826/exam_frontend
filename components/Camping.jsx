@@ -5,12 +5,9 @@ import { useState, useEffect } from "react";
 
 export default function Camping(props) {
 const [reserveCamping, setReserveCamping] = useState([]);
-
-  function add() {
-    props.addToCart(props.response);
     // I think it makes sense to call the PUT request here, when the spots are added to basket:
 
-    async function reserveSpots() {
+    async function reserveSpot() {
       const options = {
         method: 'PUT',
         headers: {'Content-Type': 'application/json', prefer: 'return=id'},
@@ -25,8 +22,6 @@ const [reserveCamping, setReserveCamping] = useState([]);
       // set reserveCamping to "response" here in the last "then"...
       .catch(err => console.error(err));
     }; 
-    reserveSpots();
-  }
 
 // final POST request put in the CreditCard.jsx
 
@@ -37,7 +32,7 @@ return (
       <p className={campingStyles.camping_p}>Available: {props.response.available}</p>
       <p>0,-</p>
 
-      <button onClick={add} className={bookingStyles.add_cart}>
+      <button onClick={reserveSpot} className={bookingStyles.add_cart}>
         Add to Cart
       </button>
     </article>
