@@ -19,8 +19,8 @@ export default function CreditCard(props) {
 
   async function submit(e) {
     e.preventDefault();
-
-    const response = await insertOrder({
+    console.log("hej");
+    /* const response = await insertOrder({
       cardNumber: creditCardForm.elements.cardNumber.value,
 
       cardMonth: creditCardForm.elements.cardMonth.value,
@@ -28,19 +28,19 @@ export default function CreditCard(props) {
       cardYear: creditCardForm.elements.cardYear.value,
 
       cvcNumber: creditCardForm.elements.cvcNumber.value,
-    });
-    if (response && response.length) {
+    });  */
+    console.log("hej 2");
+   /*  if (response && response.length) { */
       setPaymentCompleted(true);
       FinalSpotBooking(); // calling function to put POST request
-    }
+    //}
   }
 
-  useEffect(() => {
     async function FinalSpotBooking() {
       const finalOptions = {
         method: "POST",
-        headers: { "Content-Type": "application/json", prefer: "return=representation" },
-        body: '{"id":{options.id}}', // how do we reference the id?
+        headers: { "Content-Type": "application/json"},
+        body: JSON.stringify({"id":props.reservationID}),
       };
 
       fetch("http://localhost:8080/fullfill-reservation", finalOptions)
@@ -48,9 +48,7 @@ export default function CreditCard(props) {
         .then((response) => console.log(response))
         // set state setFinalCamping to "response" in last "then" after checked console.log!!!
         .catch((err) => console.error(err));
-    }
-    FinalSpotBooking();
-  });
+    };
 
   return (
     <div className="bookingStyles.creditSection">
@@ -85,7 +83,7 @@ export default function CreditCard(props) {
               </label>
               <input className={bookingStyles.input_text} type="text" name="cardSecurity" inputMode="numeric" placeholder="CVC" maxLength="3" pattern="[0-9]{3}" required></input>
             </fieldset>
-            <button className={bookingStyles.booking_ticket_button} onClick={() => setPaymentCompleted(true)}>
+            <button className={bookingStyles.booking_ticket_button}>
               Complete payment
             </button>
           </form>

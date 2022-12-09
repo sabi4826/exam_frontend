@@ -14,15 +14,16 @@ function App() {
   const [products, setProducts] = useState([]);
   const [camping, setCamping] = useState([]);
   const [cart, setCart] = useState([]);
+  const [reservationID, setReservationID] = useState(null);
 
   function addToCart(data) {
-    // console.log("addToCart", data);
+    console.log("addToCart", data);
     // do we have the ticket
-    if (cart.find((entry) => entry.id === data.id || camping.area)) {
-      /*  console.log("its there"); */
+    if (cart.find((entry) => entry.id === data.id)) {
+      /*  camping.area removed */
       setCart((oldCart) =>
         oldCart.map((entry) => {
-          if (entry.id !== data.id || camping.area) {
+          if (entry.id !== data.id) {
             return entry;
           }
           const copy = { ...entry };
@@ -75,7 +76,7 @@ function App() {
         .catch((err) => console.error(err));
     }
     fetchCamping();
-  });
+  }, []);
 
   return (
     <div className="App">
@@ -84,9 +85,9 @@ function App() {
       <Schedule />
       <BookingH2 />
       <section className={bookingStyles.booking_container}>
-        <TicketSection products={products} camping={camping} addToCart={addToCart} />
+        <TicketSection products={products} camping={camping} addToCart={addToCart} setReservationID={setReservationID}/>
         {/* <CampingBasket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} /> */}
-        <Basket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} />
+        <Basket products={products} reservationID={reservationID} cart={cart} removeFromCart={removeFromCart} />
       </section>
 
       <Footer />

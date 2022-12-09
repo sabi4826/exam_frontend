@@ -36,7 +36,7 @@ export default function Basket(props) {
             BUY TICKETS
           </button>
         )}
-        {showForm && <Booking />}
+        {showForm && <Booking reservationID={props.reservationID}/>}
       </section>
     </article>
   );

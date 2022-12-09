@@ -28,7 +28,7 @@ export default function Booking(props) {
       <div className={bookingStyles.form_section}>
         <section className={bookingStyles.form_fields}>
           {infoCompleted ? (
-            <CreditCard />
+            <CreditCard reservationID={props.reservationID}/>
           ) : (
             <form method="post" onSubmit={submit} ref={theForm}>
               <fieldset className={bookingStyles.form_styling}>
