@@ -9,23 +9,27 @@ const [reserveCamping, setReserveCamping] = useState([]);
   function add() {
     props.addToCart(props.response);
     // I think it makes sense to call the PUT request here, when the spots are added to basket:
-    /* reserveSpots(); */
+    
+    useEffect(() => {
+      async function reserveSpots() {
+      const options = {
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json', prefer: 'return=id'},
+        body: '{"area":{props.response.area},"amount":{props.response.amount}}' // do these references work???
+      }; 
+      console.log("returned id is:", id);
+      
+      fetch('http://localhost:8080/reserve-spot', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+      // set reserveCamping to "response" here in the last "then"...
+      .catch(err => console.error(err));
   }
-
-  /* useEffect(() => {
-    async function reserveSpots() {
-    const options = {
-      method: 'PUT',
-      headers: {'Content-Type': 'application/json', prefer: 'return=id'},
-      body: '{"area":{props.response.area},"amount":{props.response.amount}}' // do these references work???
-    };
-
-    fetch('http://localhost:8080/reserve-spot', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  // set reserveCamping to "response" here in the last "then"...
-  .catch(err => console.error(err));
-} */
+  reserveSpots();
+  }
+  );  
+ 
+};
 
 // final POST request put in the CreditCard.jsx
 
