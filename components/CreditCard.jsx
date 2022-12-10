@@ -6,7 +6,6 @@ import bookingStyles from "../src/style/booking.module.css";
 export default function CreditCard(props) {
   const creditCardForm = useRef(null);
   const [paymentCompleted, setPaymentCompleted] = useState(false);
-  const [finalCamping, setFinalCamping] = useState([]);
 
   // tried to make the focus jump automatically to the next field, but it's not working:
   /*   let input = document.querySelectorAll("input");
@@ -20,20 +19,8 @@ export default function CreditCard(props) {
   async function submit(e) {
     e.preventDefault();
     console.log("hej");
-    /* const response = await insertOrder({
-      cardNumber: creditCardForm.elements.cardNumber.value,
-
-      cardMonth: creditCardForm.elements.cardMonth.value,
-
-      cardYear: creditCardForm.elements.cardYear.value,
-
-      cvcNumber: creditCardForm.elements.cvcNumber.value,
-    });  */
-    console.log("hej 2");
-   /*  if (response && response.length) { */
       setPaymentCompleted(true);
       FinalSpotBooking(); // calling function to put POST request
-    //}
   }
 
     async function FinalSpotBooking() {
@@ -46,13 +33,12 @@ export default function CreditCard(props) {
       fetch("http://localhost:8080/fullfill-reservation", finalOptions)
         .then((response) => response.json())
         .then((response) => console.log(response))
-        // set state setFinalCamping to "response" in last "then" after checked console.log!!!
         .catch((err) => console.error(err));
     };
 
   return (
-    <div className="bookingStyles.creditSection">
-      <section className="bookingStyles.creditFormFields">
+    <div className={bookingStyles.creditSection}>
+      <section className={bookingStyles.creditFormFields}>
         {paymentCompleted ? (
           <p>Thank you for your purchase! We look forward to seeing you at FooFest!</p>
         ) : (
