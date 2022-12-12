@@ -18,7 +18,6 @@ export default function CreditCard(props) {
 
   async function submit(e) {
     e.preventDefault();
-    console.log("hej");
       setPaymentCompleted(true);
       FinalSpotBooking(); // calling function to put POST request
   }
@@ -42,7 +41,6 @@ export default function CreditCard(props) {
         {paymentCompleted ? (
           <p>Thank you for your purchase! We look forward to seeing you at FooFest!</p>
         ) : (
-          // should the function call for POST request be here, when the purchase is done??!! And then the function further up.
           <form onSubmit={submit} ref={creditCardForm}>
             <fieldset className={bookingStyles.creditFormStyling}>
               <legend>

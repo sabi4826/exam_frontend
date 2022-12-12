@@ -6,7 +6,7 @@ import fetchCamping from "../src/App";
 
 export default function Camping(props) {
 
-    // I think it makes sense to call the PUT request here, when the spots are added to basket:
+    // PUT request for reservation of tickets, when the spot is added to basket:
 
     async function reserveSpot() {
       const options = {
@@ -22,7 +22,7 @@ export default function Camping(props) {
       .catch(err => console.error(err));
     };  
 
-// final POST request put in the CreditCard.jsx
+// final POST reservation request put in the CreditCard.jsx
 
   return (
     <article>
@@ -33,3 +33,5 @@ export default function Camping(props) {
     </article>
   );
 };
+
+// naming all radiobuttons the same makes them a group, and only one can be picked.

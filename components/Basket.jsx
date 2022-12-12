@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Booking from "./Booking";
-
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
 
