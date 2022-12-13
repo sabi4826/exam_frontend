@@ -10,7 +10,7 @@ export default function TicketSection(props) {
     <>
       <article>
         <aside className={campingStyles.camping_heading}>
-          <h4 className={campingStyles.camping_h4}>Camping spots</h4>
+          <h3 className={campingStyles.camping_h3}>Camping spots</h3>
         </aside>
         <section className={campingStyles.camping_container}>
           {props.camping.map((camping) => (

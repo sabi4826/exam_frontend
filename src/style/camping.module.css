@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   font-family: "Righteous", cursive;
-  text-shadow: 2px 2px #000;
+  /* text-shadow: 2px 2px #000; */
   margin-bottom: 3rem;
 }
 .camping_h4 {

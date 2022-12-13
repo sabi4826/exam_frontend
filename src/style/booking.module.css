@@ -39,10 +39,7 @@
   padding: 2rem;
   text-decoration: underline;
 }
-.ticket_section h4 {
-  font-family: "Righteous", cursive;
-  text-shadow: 2px 2px #000;
-}
+
 .ticket_section p {
   color: black;
 }

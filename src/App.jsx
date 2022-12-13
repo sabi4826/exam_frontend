@@ -17,7 +17,7 @@ function App() {
   const [reservationID, setReservationID] = useState(null);
 
   function addToCart(data) {
-    console.log("addToCart", data);
+    // console.log("addToCart", data);
     // do we have the ticket
     if (cart.find((entry) => entry.id === data.id)) {
       /*  camping.area removed */
@@ -27,11 +27,16 @@ function App() {
             return entry;
           }
           const copy = { ...entry };
+
           copy.amount = copy.amount + 1;
           return copy;
         })
       );
-    } else {
+    }
+    // else if (data.id >= 5) {
+    //   console.log("atready 5");
+    // }
+    else {
       setCart((oldCart) => oldCart.concat({ ...data, amount: 1 }));
     }
   }
@@ -85,7 +90,7 @@ function App() {
       <Schedule />
       <BookingH2 />
       <section className={bookingStyles.booking_container}>
-        <TicketSection products={products} camping={camping} addToCart={addToCart} setReservationID={setReservationID}/>
+        <TicketSection products={products} camping={camping} addToCart={addToCart} setReservationID={setReservationID} />
         {/* <CampingBasket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} /> */}
         <Basket products={products} reservationID={reservationID} cart={cart} removeFromCart={removeFromCart} />
       </section>

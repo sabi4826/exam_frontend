@@ -13,7 +13,7 @@ export default function Basket(props) {
     props.cart.forEach((item) => {
       purchaseTotal += item.amount * item.price;
     });
-    
+
     total = purchaseTotal + 99;
     return total;
   }
@@ -25,7 +25,7 @@ export default function Basket(props) {
       tents = tent.tent;
     });
 
-    console.log("tents are:", tents);
+    // console.log("tents are:", tents);
     return tents;
   }
 
@@ -34,8 +34,12 @@ export default function Basket(props) {
 
     props.cart.forEach((ticket) => {
       tickets = ticket.amount;
+      if (ticket.amount >= 5) {
+        alert("You can select maximum 5 tickets.");
+      }
     });
-    console.log("ticket are:", tickets);
+
+    // console.log("ticket are:", tickets);
     return tickets;
   }
 
@@ -59,7 +63,7 @@ export default function Basket(props) {
             BUY TICKETS
           </button>
         )}
-        {showForm && <Booking reservationID={props.reservationID}/>}
+        {showForm && <Booking reservationID={props.reservationID} />}
       </section>
     </article>
   );

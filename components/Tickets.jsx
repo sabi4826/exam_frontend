@@ -21,7 +21,7 @@ function Tickets(props) {
         <option value="4" submit={add}>4</option>
         <option value="5" submit={add}>5</option>
         </select> */}
-        
+
         <button onClick={add} className={bookingStyles.add_cart}>
           Add to Cart
         </button>
