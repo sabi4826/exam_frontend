@@ -6,11 +6,11 @@ import "../src/style/index.module.css";
 export default function Basket(props) {
   const [showForm, setShowForm] = useState(false);
   let tent2=0;
-    let tent3=0;
-    let tent2Spot=0;
-    let tent3Spot=0;
-    let totalTentSpots=0;
-    let totalTickets=0;
+  let tent3=0;
+  let tent2Spot=0;
+  let tent3Spot=0;
+  let totalTentSpots=0;
+  let totalTickets=0;
 
   function getTotal() {
     let purchaseTotal = 0;
@@ -30,7 +30,8 @@ export default function Basket(props) {
     if(tent2>0) {
       tent2Spot = tent2 * 2; // 2 = spots in each tent = total of spots
     }
-    // tent3 = props.cart.find(el=>el.id==="4")?.amount||0;
+
+    tent3 = props.cart.find(el=>el.id==="4")?.amount||0;
     if(tent3>0) {
       tent3Spot = tent3 * 3; // 3 = spots in each tent
     }
@@ -43,11 +44,12 @@ export default function Basket(props) {
     const regular = props.cart.find(el=>el.id==="0")?.amount||0;
     const vip = props.cart.find(el=>el.id==="1")?.amount|| 0;
 
-    if (ticket.amount >= 5) {
+    totalTickets = regular + vip;
+/* NOT WORKING YET - IT'S POSSIBLE TO ADD MORE TO CART + THE ALERT COMES ALSO ON TENTS!
+    if (totalTickets >= 5) {
       alert("You can select maximum 5 tickets.");
-    }
+    } */
 
-    // totalTickets = regular + vip;
     return totalTickets;
   }
 
@@ -64,8 +66,8 @@ export default function Basket(props) {
         ))}
         <p className={bookingStyles.bookingFee}>Booking fee: 99,-</p>
         <h3>Total: {getTotal()},-</h3>
-        <p>Number of tickets: {getTickets()}</p>
-        <p>Number of tent spots: {getTents()}</p>
+        <p className={bookingStyles.bookingFee}>Number of tickets: {getTickets()}</p>
+        <p className={bookingStyles.bookingFee}>Number of tent spots: {getTents()}</p>
         {!showForm && (
           // check for tents bought and matching with tickets: 
           <button onClick={() => 
