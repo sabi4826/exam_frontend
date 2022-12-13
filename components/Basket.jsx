@@ -5,6 +5,12 @@ import "../src/style/index.module.css";
 
 export default function Basket(props) {
   const [showForm, setShowForm] = useState(false);
+  let tent2=0;
+    let tent3=0;
+    let tent2Spot=0;
+    let tent3Spot=0;
+    let totalTentSpots=0;
+    let totalTickets=0;
 
   function getTotal() {
     let purchaseTotal = 0;
@@ -19,24 +25,25 @@ export default function Basket(props) {
   }
 
   function getTents() {
-    let tents = 0;
-
-    props.cart.forEach((tent) => {
-      tents = tent.tent;
-    });
-
-    console.log("tents are:", tents);
-    return tents;
+    // find amount of tents in basket with amount and "tent"(2 or 3 spots) - return amount or 0:
+    tent2 = props.cart.find(el=>el.id==="3")?.amount||0; // set tent2 to amount of 2 pers. tents. If the amount is more than 0, * it with spots (2).
+    if(tent2>0) {
+      tent2Spot = tent2 * 2; // 2 = spots in each tent = total of spots
+    }
+    tent3 = props.cart.find(el=>el.id==="4")?.amount||0;
+    if(tent3>0) {
+      tent3Spot = tent3 * 3; // 3 = spots in each tent
+    }
+    totalTentSpots = tent2Spot + tent3Spot;
+    return totalTentSpots;
   }
 
   function getTickets() {
-    let tickets = 0;
-
-    props.cart.forEach((ticket) => {
-      tickets = ticket.amount;
-    });
-    console.log("ticket are:", tickets);
-    return tickets;
+    // find amount of tickets in basket with "id" and amount - return amount or 0:
+    const regular = props.cart.find(el=>el.id==="0")?.amount||0;
+    const vip = props.cart.find(el=>el.id==="1")?.amount || 0;
+    totalTickets = regular + vip;
+    return totalTickets;
   }
 
   return (
@@ -55,7 +62,13 @@ export default function Basket(props) {
         <p>Number of tickets: {getTickets()}</p>
         <p>Number of tent spots: {getTents()}</p>
         {!showForm && (
-          <button onClick={() => setShowForm(true)} className={bookingStyles.booking_ticket_button}>
+          // check for tents bought and matching with tickets: 
+          <button onClick={() => 
+  {if(totalTentSpots>=totalTickets)
+  {setShowForm(true)}
+  else {
+    alert=("Your amount of tent spots does not match the amount of tickets reserved. Please add one or more tents.");
+   }}} className={bookingStyles.booking_ticket_button}>
             BUY TICKETS
           </button>
         )}

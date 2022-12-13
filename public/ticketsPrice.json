@@ -17,13 +17,13 @@
   {
     "name": "2 Person Tent",
     "id": "3",
-    "tent": "2",
+    "tent": 2,
     "price": "299"
   },
   {
     "name": "3 Person Tent",
     "id": "4",
-    "tent": "3",
+    "tent": 3,
     "price": "399"
   },
   {

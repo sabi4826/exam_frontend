@@ -9,7 +9,6 @@ import Basket from "./Basket";
 export default function Booking(props) {
   const theForm = useRef(null);
   const [infoCompleted, setInfoCompleted] = useState(false);
-  let tents = 0;
 
   async function submit(e) {
     e.preventDefault();
@@ -22,21 +21,9 @@ export default function Booking(props) {
 
       basket: props.cart,
     });
-    console.log(response);
+    // console.log(response);
+    setInfoCompleted(true);
     
-    // check for tents bought and matching with tickets: NOT WORKING YET
-  /* if(props.cart.includes('Tent'))
-    {
-      if(data.id === "3" || "4") {
-      props.cart.forEach((tent) => {
-        tents = tent.amount;
-
-        let tent = data.number >= props.cart.includes('ticket').amount;
-      console.log("tent is:", tent);
-      });
-    }
-    } else {
-    setInfoCompleted(true);} */
   } 
   return (
     <>
