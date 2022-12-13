@@ -41,10 +41,11 @@ export default function Basket(props) {
   function getTickets() {
     // find amount of tickets in basket with "id" and amount - return amount or 0:
     const regular = props.cart.find(el=>el.id==="0")?.amount||0;
-    const vip = props.cart.find(el=>el.id==="1")?.amount      if (ticket.amount >= 5) {
-        alert("You can select maximum 5 tickets.");
-      }
- || 0;
+    const vip = props.cart.find(el=>el.id==="1")?.amount|| 0;
+
+    if (ticket.amount >= 5) {
+      alert("You can select maximum 5 tickets.");
+    }
 
     // totalTickets = regular + vip;
     return totalTickets;
@@ -71,7 +72,7 @@ export default function Basket(props) {
   {if(totalTentSpots>=totalTickets)
   {setShowForm(true)}
   else {
-    alert=("Your amount of tent spots does not match the amount of tickets reserved. Please add one or more tents.");
+    alert("Your amount of tent spots does not match the amount of tickets reserved. Please add one or more tents.");
    }}} className={bookingStyles.booking_ticket_button}>
             BUY TICKETS
           </button>
