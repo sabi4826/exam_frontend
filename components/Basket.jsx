@@ -13,8 +13,30 @@ export default function Basket(props) {
     props.cart.forEach((item) => {
       purchaseTotal += item.amount * item.price;
     });
+    
     total = purchaseTotal + 99;
     return total;
+  }
+
+  function getTents() {
+    let tents = 0;
+
+    props.cart.forEach((tent) => {
+      tents = tent.tent;
+    });
+
+    console.log("tents are:", tents);
+    return tents;
+  }
+
+  function getTickets() {
+    let tickets = 0;
+
+    props.cart.forEach((ticket) => {
+      tickets = ticket.amount;
+    });
+    console.log("ticket are:", tickets);
+    return tickets;
   }
 
   return (
@@ -30,6 +52,8 @@ export default function Basket(props) {
         ))}
         <p className={bookingStyles.bookingFee}>Booking fee: 99,-</p>
         <h3>Total: {getTotal()},-</h3>
+        <p>Number of tickets: {getTickets()}</p>
+        <p>Number of tent spots: {getTents()}</p>
         {!showForm && (
           <button onClick={() => setShowForm(true)} className={bookingStyles.booking_ticket_button}>
             BUY TICKETS
