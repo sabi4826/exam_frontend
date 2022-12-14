@@ -5,6 +5,7 @@ import "../src/style/index.module.css";
 import CreditCard from "./CreditCard";
 import insertOrder from "../modules/db";
 import Basket from "./Basket";
+import GuestInfo from "./GuestInfo";
 
 export default function Booking(props) {
   const theForm = useRef(null);
@@ -46,13 +47,19 @@ export default function Booking(props) {
                 <label className={bookingStyles.label_text} htmlFor="phone">
                   Phone:
                 </label>
-                <input className={bookingStyles.input_text} type="tel" inputMode="numeric" name="phone" required placeholder="ex.1234556"></input>
+                <input className={bookingStyles.input_text} type="tel" inputMode="numeric" name="phone" required placeholder="ex.+451234556"></input>
 
                 <label className={bookingStyles.label_text} htmlFor="email">
                   E-mail:
                 </label>
                 <input className={bookingStyles.input_text} type="email" name="email" required placeholder="name@mail.com"></input>
               </fieldset>
+              <div><button onClick={() => {if(props.totalTickets>=2){
+                  <GuestInfo totalTickets={props.totalTickets} />
+                } /* else {
+                  disabled={true}
+                } */
+              }}>Enter guest info</button></div>
               <button type="submit" className={bookingStyles.booking_ticket_button}>
                 Go to payment
               </button>

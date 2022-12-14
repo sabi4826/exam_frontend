@@ -79,7 +79,7 @@ export default function Basket(props) {
             BUY TICKETS
           </button>
         )}
-        {showForm && <Booking reservationID={props.reservationID} />}
+        {showForm && <Booking reservationID={props.reservationID} totalTickets={totalTickets}/>}
       </section>
     </article>
   );

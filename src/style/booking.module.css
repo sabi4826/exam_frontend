@@ -54,6 +54,17 @@
   cursor: pointer;
 }
 
+.booking_extra_info_button {
+  background-color: #f0037a;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 2px 2px 13px black;
+  font-size: 1.414rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
 #Qty {
   margin: 0 7%;
   border: none;
