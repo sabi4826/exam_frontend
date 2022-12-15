@@ -1,0 +1,9 @@
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: white;
+  bottom: 50px;
+  transform: scaleX(0);
+}
