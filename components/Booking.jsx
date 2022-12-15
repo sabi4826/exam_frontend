@@ -6,10 +6,13 @@ import CreditCard from "./CreditCard";
 import insertOrder from "../modules/db";
 import Basket from "./Basket";
 import GuestInfo from "./GuestInfo";
+import handleClick from "./GuestInfo";
 
 export default function Booking(props) {
   const theForm = useRef(null);
   const [infoCompleted, setInfoCompleted] = useState(false);
+  const [infoButtonClicked, setInfoButtonClicked] = useState(false);
+
 
   async function submit(e) {
     e.preventDefault();
@@ -54,12 +57,8 @@ export default function Booking(props) {
                 </label>
                 <input className={bookingStyles.input_text} type="email" name="email" required placeholder="name@mail.com"></input>
               </fieldset>
-              <div><button onClick={() => {if(props.totalTickets>=2){
-                  <GuestInfo totalTickets={props.totalTickets} />
-                } /* else {
-                  disabled={true}
-                } */
-              }}>Enter guest info</button></div>
+              <button className={bookingStyles.booking_extra_info_button} onClick={() =>{setInfoButtonClicked(true)}}>Enter guest info</button>
+                  {infoButtonClicked && <GuestInfo totalTickets={props.totalTickets}/>}
               <button type="submit" className={bookingStyles.booking_ticket_button}>
                 Go to payment
               </button>
