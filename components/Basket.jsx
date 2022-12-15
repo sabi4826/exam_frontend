@@ -46,7 +46,7 @@ export default function Basket(props) {
 
     totalTickets = regular + vip;
 
-/* NOT WORKING YET - IT'S POSSIBLE TO ADD MORE TO CART + THE ALERT COMES ALSO ON TENTS!*/
+    /* NOT WORKING YET - IT'S POSSIBLE TO ADD MORE TO CART + THE ALERT COMES ALSO ON TENTS!*/
     if (totalTickets >= 5) {
       // console.log("its there");
       alert("You can select maximum 5 tickets.");
@@ -71,34 +71,27 @@ export default function Basket(props) {
         <p className={bookingStyles.bookingFee}>Number of tickets: {getTickets()}</p>
         <p className={bookingStyles.bookingFee}>Number of tent spots: {getTents()}</p>
         {!showForm && (
-<<<<<<< HEAD
-          // check for tents bought and matching with tickets:
+          // check for if tents bought and matching with tickets:
           <button
             onClick={() => {
-              if (totalTentSpots >= totalTickets) {
-                setShowForm(true);
-              } else {
-                alert("Your amount of tent spots does not match the amount of tickets reserved. Please add one or more tents.");
+              if (props.cart.includes((el) => el.id === "3" || "4"))
+                if (totalTentSpots >= totalTickets) {
+                  setShowForm(true);
+                } else {
+                  alert("Your amount of tent spots does not match the amount of tickets reserved. Please add one or more tents.");
+                }
+              else {
+                {
+                  setShowForm(true);
+                }
               }
             }}
             className={bookingStyles.booking_ticket_button}
           >
-=======
-          // check for if tents bought and matching with tickets: 
-          <button onClick={() => 
-  {if(props.cart.includes(el=>el.id==="3" || "4"))
-    if(totalTentSpots>=totalTickets)
-  {setShowForm(true)}
-  else {
-    alert("Your amount of tent spots does not match the amount of tickets reserved. Please add one or more tents.");
-   } else {
-    {setShowForm(true)}
-   }}} className={bookingStyles.booking_ticket_button}>
->>>>>>> master
             BUY TICKETS
           </button>
         )}
-        {showForm && <Booking reservationID={props.reservationID} totalTickets={totalTickets}/>}
+        {showForm && <Booking reservationID={props.reservationID} totalTickets={totalTickets} />}
       </section>
     </article>
   );
