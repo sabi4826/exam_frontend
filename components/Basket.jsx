@@ -71,10 +71,13 @@ export default function Basket(props) {
         {!showForm && (
           // check for tents bought and matching with tickets: 
           <button onClick={() => 
-  {if(totalTentSpots>=totalTickets)
+  {if(props.cart.includes(el=>el.id==="3" || "4"))
+    if(totalTentSpots>=totalTickets)
   {setShowForm(true)}
   else {
     alert("Your amount of tent spots does not match the amount of tickets reserved. Please add one or more tents.");
+   } else {
+    {setShowForm(true)}
    }}} className={bookingStyles.booking_ticket_button}>
             BUY TICKETS
           </button>
