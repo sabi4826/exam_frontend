@@ -54,15 +54,18 @@
   cursor: pointer;
 }
 
+/* Button for extra button for extra info fields in the booking */
 .booking_extra_info_button {
   background-color: #f0037a;
   color: white;
   border: 0;
   border-radius: 8px;
-  box-shadow: 2px 2px 13px black;
-  font-size: 1.414rem;
-  padding: 1rem;
+  box-shadow: 1px 1px 10px black;
+  font-size: 1rem;
+  padding: 0.6rem;
   cursor: pointer;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 #Qty {

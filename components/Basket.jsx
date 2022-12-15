@@ -45,6 +45,7 @@ export default function Basket(props) {
     const vip = props.cart.find(el=>el.id==="1")?.amount|| 0;
 
     totalTickets = regular + vip;
+
 /* NOT WORKING YET - IT'S POSSIBLE TO ADD MORE TO CART + THE ALERT COMES ALSO ON TENTS!
     if (totalTickets >= 5) {
       alert("You can select maximum 5 tickets.");
@@ -69,7 +70,7 @@ export default function Basket(props) {
         <p className={bookingStyles.bookingFee}>Number of tickets: {getTickets()}</p>
         <p className={bookingStyles.bookingFee}>Number of tent spots: {getTents()}</p>
         {!showForm && (
-          // check for tents bought and matching with tickets: 
+          // check for if tents bought and matching with tickets: 
           <button onClick={() => 
   {if(props.cart.includes(el=>el.id==="3" || "4"))
     if(totalTentSpots>=totalTickets)
