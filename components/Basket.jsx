@@ -45,13 +45,8 @@ export default function Basket(props) {
     const vip = props.cart.find((el) => el.id === "1")?.amount || 0;
 
     totalTickets = regular + vip;
-<<<<<<< HEAD
-    // console.log(totalTickets);
-    /* NOT WORKING YET - IT'S POSSIBLE TO ADD MORE TO CART + THE ALERT COMES ALSO ON TENTS! */
-=======
 
-/* NOT WORKING YET - IT'S POSSIBLE TO ADD MORE TO CART + THE ALERT COMES ALSO ON TENTS!
->>>>>>> master
+/* NOT WORKING YET - IT'S POSSIBLE TO ADD MORE TO CART + THE ALERT COMES ALSO ON TENTS!*/
     if (totalTickets >= 5) {
       // console.log("its there");
       alert("You can select maximum 5 tickets.");
