@@ -7,10 +7,10 @@ import Booking from "../components/Booking";
 import Basket from "../components/Basket";
 import TicketSection from "../components/TicketSection";
 import CampingBasket from "../components/CampingBasket";
-
 import bookingStyles from "../src/style/booking.module.css";
 import BookingH2 from "../components/BookingH2";
-function App() {
+
+export default function App() {
   const [products, setProducts] = useState([]);
   const [camping, setCamping] = useState([]);
   const [cart, setCart] = useState([]);
@@ -91,13 +91,9 @@ function App() {
       <BookingH2 />
       <section className={bookingStyles.booking_container}>
         <TicketSection products={products} camping={camping} addToCart={addToCart} setReservationID={setReservationID} />
-        {/* <CampingBasket products={products} camping={camping} cart={cart} removeFromCart={removeFromCart} /> */}
         <Basket products={products} reservationID={reservationID} cart={cart} removeFromCart={removeFromCart} />
       </section>
-
       <Footer />
     </div>
   );
 }
-
-export default App;

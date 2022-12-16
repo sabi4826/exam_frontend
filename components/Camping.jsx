@@ -1,7 +1,4 @@
-import bookingStyles from "../src/style/booking.module.css";
 import campingStyles from "../src/style/camping.module.css";
-import { useState, useEffect } from "react";
-import fetchCamping from "../src/App";
 //in App.jsx our fetched data is called response, so that is used everywhere with camping spots.
 
 export default function Camping(props) {
