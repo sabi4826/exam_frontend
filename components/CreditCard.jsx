@@ -1,6 +1,5 @@
 import React from "react";
-/* import {insertOrder} from '../modules/db'; */
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef} from "react";
 import bookingStyles from "../src/style/booking.module.css";
 
 export default function CreditCard(props) {
@@ -32,7 +31,6 @@ export default function CreditCard(props) {
         {paymentCompleted ? (
           <p>Thank you for your purchase! We look forward to seeing you at FooFest!</p>
         ) : (
-          // should we add in a string that says "that you for ordering ___ tickets to ___ area" etc
           <form onSubmit={submit} ref={creditCardForm}>
             <fieldset className={bookingStyles.creditFormStyling}>
               <legend>
@@ -59,7 +57,7 @@ export default function CreditCard(props) {
               </label>
               <input className={bookingStyles.input_text} type="text" name="cardSecurity" inputMode="numeric" placeholder="CVC" maxLength="3" pattern="[0-9]{3}" required></input>
             </fieldset>
-            <button className={bookingStyles.booking_ticket_button}>Complete payment</button>
+            <button className={bookingStyles.booking_ticket_button}>Complete your purchase</button>
           </form>
         )}
       </section>

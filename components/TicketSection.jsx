@@ -21,6 +21,7 @@ export default function TicketSection(props) {
           <aside className={campingStyles.camping_heading}>
             <h3 className={campingStyles.camping_h3}>Tickets</h3>
             <p className={campingStyles.camping_p}>Tickets and extras</p>
+            <p className={campingStyles.camping_p}>It is only possible to buy a maximum of 5 tickets per purchase.</p>
           </aside>
           <section className={bookingStyles.ticket_section}>
             {props.products.map((product) => (
