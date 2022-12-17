@@ -46,10 +46,9 @@ export default function Basket(props) {
 
     totalTickets = regular + vip;
 
-/* NOT WORKING YET - IT'S POSSIBLE TO ADD MORE TO CART + THE ALERT COMES ALSO ON TENTS!
     if (totalTickets >= 5) {
       alert("You can select maximum 5 tickets.");
-    } */
+    }
 
     return totalTickets;
   }

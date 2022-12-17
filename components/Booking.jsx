@@ -2,18 +2,14 @@ import React from "react";
 import { useState, useRef } from "react";
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
-import CreditCard from "./CreditCard";
 import insertOrder from "../modules/db";
-import Basket from "./Basket";
 import GuestInfo from "./GuestInfo";
-import handleClick from "./GuestInfo";
 
 export default function Booking(props) {
   const theForm = useRef(null);
-  const [infoCompleted, setInfoCompleted] = useState(false);
-  const [guestButtonClicked, setGuestButtonClicked] = useState(false);
+  const [firstPersonalInfoCompleted, setFirstPersonalInfoCompleted] = useState(false);
 
-
+  // saves data and POSTs to Supabase:
   async function submit(e) {
     e.preventDefault();
     const response = await insertOrder({
@@ -25,16 +21,15 @@ export default function Booking(props) {
 
       basket: props.cart,
     });
-    // console.log(response);
-    setInfoCompleted(true); // copied from giest button: <GuestInfo totalTickets={props.totalTickets}/>
-    
+    setFirstPersonalInfoCompleted(true);
   } 
+
   return (
     <>
       <div className={bookingStyles.form_section}>
         <section className={bookingStyles.form_fields}>
-          {infoCompleted ? (
-            <CreditCard reservationID={props.reservationID}/>
+          {firstPersonalInfoCompleted ? (
+            <GuestInfo totalTickets={props.totalTickets} reservationID={props.reservationID} />
           ) : (
             <form method="post" onSubmit={submit} ref={theForm}>
               <fieldset className={bookingStyles.form_styling}>
@@ -57,10 +52,8 @@ export default function Booking(props) {
                 </label>
                 <input className={bookingStyles.input_text} type="email" name="email" required placeholder="name@mail.com"></input>
               </fieldset>
-              <button className={bookingStyles.booking_extra_info_button} onClick={() =>{setGuestButtonClicked(true)}}>Enter guest info</button>
-                  {/* {guestButtonClicked && } */}
               <button type="submit" className={bookingStyles.booking_ticket_button}>
-                Go to payment
+                Fill out guest information
               </button>
             </form>
           )}

@@ -7,15 +7,6 @@ export default function CreditCard(props) {
   const creditCardForm = useRef(null);
   const [paymentCompleted, setPaymentCompleted] = useState(false);
 
-  // tried to make the focus jump automatically to the next field, but it's not working:
-  /*   let input = document.querySelectorAll("input");
-  input.forEach((el) => {
-
-    el.addEventListener("input", (e) => {
-      if (e.target.value.length === e.target.maxLength) {e.target.nextElementSibling.focus();}
-    });
-  }); */
-
   async function submit(e) {
     e.preventDefault();
     setPaymentCompleted(true);
