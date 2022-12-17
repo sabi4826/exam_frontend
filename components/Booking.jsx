@@ -11,7 +11,7 @@ import handleClick from "./GuestInfo";
 export default function Booking(props) {
   const theForm = useRef(null);
   const [infoCompleted, setInfoCompleted] = useState(false);
-  const [infoButtonClicked, setInfoButtonClicked] = useState(false);
+  const [guestButtonClicked, setGuestButtonClicked] = useState(false);
 
 
   async function submit(e) {
@@ -26,7 +26,7 @@ export default function Booking(props) {
       basket: props.cart,
     });
     // console.log(response);
-    setInfoCompleted(true);
+    setInfoCompleted(true); // copied from giest button: <GuestInfo totalTickets={props.totalTickets}/>
     
   } 
   return (
@@ -57,8 +57,8 @@ export default function Booking(props) {
                 </label>
                 <input className={bookingStyles.input_text} type="email" name="email" required placeholder="name@mail.com"></input>
               </fieldset>
-              <button className={bookingStyles.booking_extra_info_button} onClick={() =>{setInfoButtonClicked(true)}}>Enter guest info</button>
-                  {infoButtonClicked && <GuestInfo totalTickets={props.totalTickets}/>}
+              <button className={bookingStyles.booking_extra_info_button} onClick={() =>{setGuestButtonClicked(true)}}>Enter guest info</button>
+                  {/* {guestButtonClicked && } */}
               <button type="submit" className={bookingStyles.booking_ticket_button}>
                 Go to payment
               </button>

@@ -35,7 +35,7 @@ console.log("guestAsArray", guestsAsArray);
   return (
 
     <>
-        <h3 className={bookingStyles.h3_text}>Guest Info</h3>
+        {/* <h3 className={bookingStyles.h3_text}>Guest Info</h3>
         <div ref={formInfo}  className={bookingStyles.form_styling}>
             {guestsAsArray.map((guest, i)=> (
                 <div key={i}> 
@@ -46,7 +46,7 @@ console.log("guestAsArray", guestsAsArray);
                 </div>  
             ))}
             <button onClick={handleInfo} className={bookingStyles.booking_extra_info_button}>Confirm information</button>
-    </div>
+    </div> */}
     </> 
 
       )
