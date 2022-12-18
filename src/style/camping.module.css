@@ -1,6 +1,6 @@
 .camping_container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   font-family: "Righteous", cursive;
   /* text-shadow: 2px 2px #000; */
   margin-bottom: 3rem;
@@ -40,6 +40,6 @@
 @media screen and (min-width: 1000px) {
   .camping_container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }

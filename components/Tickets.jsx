@@ -8,7 +8,7 @@ function Tickets(props) {
     <>
       <article className={bookingStyles.articleSection}>
         <h4>{props.data.name}</h4>
-        <p>{props.data.price}</p>
+        <p>{props.data.price},-</p>
 
         <button onClick={add} className={bookingStyles.add_cart}>
           Add to Cart

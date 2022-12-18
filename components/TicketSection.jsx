@@ -9,14 +9,6 @@ export default function TicketSection(props) {
   return (
     <>
       <article>
-        <aside className={campingStyles.camping_heading}>
-          <h3 className={campingStyles.camping_h3}>Camping spots</h3>
-        </aside>
-        <section className={campingStyles.camping_container}>
-          {props.camping.map((camping) => (
-            <Camping key={camping.area} response={camping} setReservationID={props.setReservationID} />
-          ))}
-        </section>
         <div>
           <aside className={campingStyles.camping_heading}>
             <h3 className={campingStyles.camping_h3}>Tickets</h3>
@@ -26,6 +18,14 @@ export default function TicketSection(props) {
           <section className={bookingStyles.ticket_section}>
             {props.products.map((product) => (
               <Tickets key={product.id} data={product} addToCart={props.addToCart} />
+            ))}
+          </section>
+          <aside className={campingStyles.camping_heading}>
+            <h3 className={campingStyles.camping_h3}>Camping spots</h3>
+          </aside>
+          <section className={campingStyles.camping_container}>
+            {props.camping.map((camping) => (
+              <Camping key={camping.area} response={camping} setReservationID={props.setReservationID} />
             ))}
           </section>
         </div>

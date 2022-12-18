@@ -89,6 +89,7 @@ export default function App() {
       <Header />
       <Schedule />
       <BookingH2 />
+
       <section className={bookingStyles.booking_container}>
         <TicketSection products={products} camping={camping} addToCart={addToCart} setReservationID={setReservationID} />
         <Basket products={products} reservationID={reservationID} cart={cart} removeFromCart={removeFromCart} />

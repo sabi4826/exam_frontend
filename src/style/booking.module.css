@@ -232,10 +232,10 @@
   }
 }
 @media screen and (min-width: 850px) {
-  /* .booking_container {
+  .booking_container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  } */
+    grid-template-columns: 60% 40%;
+  }
   .booking_section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -243,8 +243,13 @@
   .ticket_section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 5rem;
   }
   .h3_text {
     font-size: 3rem;
   }
+  /* .calc_text {
+    position: relative;
+    top: 40%;
+  } */
 }
