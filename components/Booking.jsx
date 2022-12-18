@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import bookingStyles from "../src/style/booking.module.css";
 import "../src/style/index.module.css";
 import insertOrder from "../modules/db";
-import GuestInfo from "./GuestInfo";
+import Step2InForm from "./Step2InForm";
 
 export default function Booking(props) {
   const theForm = useRef(null);
@@ -29,7 +29,7 @@ export default function Booking(props) {
       <div className={bookingStyles.form_section}>
         <section className={bookingStyles.form_fields}>
           {firstPersonalInfoCompleted ? (
-            <GuestInfo totalTickets={props.totalTickets} reservationID={props.reservationID} />
+            <Step2InForm totalTickets={props.totalTickets} reservationID={props.reservationID} />
           ) : (
             <form method="post" onSubmit={submit} ref={theForm}>
               <fieldset className={bookingStyles.form_styling}>
@@ -53,7 +53,7 @@ export default function Booking(props) {
                 <input className={bookingStyles.input_text} type="email" name="email" required placeholder="name@mail.com"></input>
               </fieldset>
               <button type="submit" className={bookingStyles.booking_ticket_button}>
-                Fill out guest information
+                Reserve your tickets
               </button>
             </form>
           )}
