@@ -25,6 +25,7 @@ img {
   width: 100%;
   padding: 2rem;
   box-shadow: 2px 2px 10px #6cc1f6;
+  z-index: 9999;
 }
 
 nav li {

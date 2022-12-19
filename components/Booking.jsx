@@ -22,7 +22,7 @@ export default function Booking(props) {
       basket: props.cart,
     });
     setFirstPersonalInfoCompleted(true);
-  } 
+  }
 
   return (
     <>
