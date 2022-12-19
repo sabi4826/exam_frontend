@@ -45,22 +45,22 @@ export default function CreditCard(props) {
               <label className={bookingStyles.label_text} htmlFor="creditCardNumber">
                 Credit card number:
               </label>
-              <input className={bookingStyles.input_text} type="text" name="cardNumber" inputMode="numeric" placeholder="Credit Card Number" maxLength="16" pattern="[0-9]{16}" required></input>
+              <input className={bookingStyles.input_text} type="text" name="cardNumber" inputMode="numeric" placeholder="Credit Card Number" maxLength="16" pattern="[0-9]{16}" alt="credit card number" required></input>
 
               <label className={bookingStyles.label_text} htmlFor="creditCardMonth">
                 Month:
               </label>
-              <input className={bookingStyles.input_text} type="text" name="cardMonth" inputMode="numeric" placeholder="Month" maxLength="2" pattern="[0-1][0-9]" required></input>
+              <input className={bookingStyles.input_text} type="text" name="cardMonth" inputMode="numeric" placeholder="Month" maxLength="2" pattern="[0-1][0-9]" alt="credit card month" required></input>
 
               <label className={bookingStyles.label_text} htmlFor="creditCardYear">
                 Year:
               </label>
-              <input className={bookingStyles.input_text} type="text" name="cardYear" inputMode="numeric" placeholder="Year" maxLength="2" pattern="2[2-9]" required></input>
+              <input className={bookingStyles.input_text} type="text" name="cardYear" inputMode="numeric" placeholder="Year" maxLength="2" pattern="2[2-9]" alt="credit card year" required></input>
 
               <label className={bookingStyles.label_text} htmlFor="creditCardCvc">
                 CVC number:
               </label>
-              <input className={bookingStyles.input_text} type="text" name="cardSecurity" inputMode="numeric" placeholder="CVC" maxLength="3" pattern="[0-9]{3}" required></input>
+              <input className={bookingStyles.input_text} type="text" name="cardSecurity" inputMode="numeric" placeholder="CVC" maxLength="3" pattern="[0-9]{3}" alt="credit card cvc" required></input>
             </fieldset>
             <button className={bookingStyles.booking_ticket_button}>Check Out</button>
           </form>
