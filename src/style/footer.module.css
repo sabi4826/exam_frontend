@@ -23,11 +23,16 @@ img {
   line-height: 1.7rem;
   text-align: center;
 }
+.h2_header {
+  text-shadow: 2px 2px #b523e6;
+}
 .headline_text {
+  color: black;
   font-size: 1.999rem;
 }
 .footer_text {
   font-size: 1.414rem;
+  color: black;
 }
 .contact,
 .email,
@@ -36,6 +41,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: black;
 }
 @media screen and (min-width: 850px) {
   .footer_content {

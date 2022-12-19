@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <div className={footerStyles.footer_content}>
       <div className={footerStyles.footer_headlines}>
-        <h2>FooFest</h2>
+        <h2 className={footerStyles.h2_header}>FooFest</h2>
         <p className={footerStyles.footer_text}>For camping inquiries, ticket purchases, and accessibility arrangements, please reach out to us at:</p>
       </div>
 
