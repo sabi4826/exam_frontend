@@ -11,10 +11,10 @@ export default function Menu() {
       <nav>
         <ul>
           <li>
-            <a href="#">Schedule</a>
+            <a href="#">SCHEDULE</a>
           </li>
           <li>
-            <a href="#">About FooFest</a>
+            <a href="#">ABOUT FOOFEST</a>
           </li>
           <li>
             <a href="#">FAQ</a>
