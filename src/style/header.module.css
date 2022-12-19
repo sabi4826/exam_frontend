@@ -7,11 +7,13 @@
   font-size: 16px;
 }
 
-/* Gradient for header background. From coolers.co */
 .foo_header {
   background-image: url(../assets/bg.webp);
   background-repeat: no-repeat;
-  /* opacity: 1; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .header_h1 {
