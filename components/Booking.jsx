@@ -22,7 +22,7 @@ export default function Booking(props) {
       basket: props.cart,
     });
     setFirstPersonalInfoCompleted(true);
-  } 
+  }
 
   return (
     <>
@@ -53,7 +53,7 @@ export default function Booking(props) {
                 <input className={bookingStyles.input_text} type="email" name="email" required placeholder="name@mail.com"></input>
               </fieldset>
               <button type="submit" className={bookingStyles.booking_ticket_button}>
-                Fill out guest information
+                Guest information
               </button>
             </form>
           )}
