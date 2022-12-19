@@ -9,6 +9,7 @@ import TicketSection from "../components/TicketSection";
 import CampingBasket from "../components/CampingBasket";
 import bookingStyles from "../src/style/booking.module.css";
 import BookingH2 from "../components/BookingH2";
+import Newsletter from "../components/Newsletter";
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -88,12 +89,14 @@ export default function App() {
       <Menu />
       <Header />
       <Schedule />
+      <Newsletter />
       <BookingH2 />
 
       <section className={bookingStyles.booking_container}>
         <TicketSection products={products} camping={camping} addToCart={addToCart} setReservationID={setReservationID} />
         <Basket products={products} reservationID={reservationID} cart={cart} removeFromCart={removeFromCart} />
       </section>
+
       <Footer />
     </div>
   );
