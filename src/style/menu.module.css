@@ -2,7 +2,7 @@
 :root {
   --primary-font: "Righteous", sans-serif;
   --secondary-font: "Poppins", sans-serif;
-  --dark-color1: #f0037a;
+  --dark-color1: rgb(255, 71, 195);
   --dark-text-color: rgb(255, 255, 255);
 }
 
@@ -44,7 +44,7 @@ nav li a {
   font-size: 1.414rem;
   font-family: var(--secondary-font);
   margin-left: 4rem;
-  text-shadow: 1px 1px #444042;
+  /* text-shadow: 1px 1px #444042; */
   color: black;
   cursor: pointer;
 }
@@ -67,7 +67,7 @@ nav li a {
     padding: 1rem;
   }
   nav li a {
-    font-size: 15px;
+    font-size: 1rem;
   }
 
   .buyTicketButton {
@@ -78,6 +78,7 @@ nav li a {
   .logoText {
     margin-top: 1rem;
     font-size: 3rem;
+    letter-spacing: 0.2rem;
   }
 }
 
@@ -99,11 +100,12 @@ nav li a {
   .logoText {
     margin-top: 1rem;
     font-size: 3rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 2px 2px white;
   }
 }
 @media screen and (min-width: 800px) {
   nav li a {
-    /* font-size: 20px; */
     padding: 1rem;
   }
   .buyTicketButton {
