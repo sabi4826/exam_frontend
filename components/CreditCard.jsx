@@ -1,8 +1,9 @@
 import React from "react";
-import { useState, useRef} from "react";
+import { useState, useRef } from "react";
 import bookingStyles from "../src/style/booking.module.css";
 
 export default function CreditCard(props) {
+  console.log(props.reservationID);
   const creditCardForm = useRef(null);
   const [paymentCompleted, setPaymentCompleted] = useState(false);
 
@@ -29,7 +30,10 @@ export default function CreditCard(props) {
     <div className={bookingStyles.creditSection}>
       <section className={bookingStyles.creditFormFields}>
         {paymentCompleted ? (
-          <p>Thank you for your purchase! We look forward to seeing you at FooFest!</p>
+          <section>
+            <h3>Reservation ID: {props.reservationID}</h3>
+            <p>Thank you for your purchase!We look forward to seeing you at FooFest!</p>
+          </section>
         ) : (
           <form onSubmit={submit} ref={creditCardForm}>
             <fieldset className={bookingStyles.creditFormStyling}>
