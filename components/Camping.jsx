@@ -12,7 +12,7 @@ export default function Camping(props) {
         body: JSON.stringify({"area":props.response.area,"amount":1}) 
       }; 
       
-      fetch('http://localhost:8080/reserve-spot', options)
+      fetch('https://exam2022-reaction.fly.dev/reserve-spot', options)
       .then(res => res.json())
       .then(res => props.setReservationID(res.id))
       // set reserveCamping to "response" here in the last "then"...

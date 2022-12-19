@@ -2,33 +2,39 @@
   {
     "name": "Regular Ticket",
     "id": "0",
-    "price": "799"
+    "price": "799",
+    "info": ""
   },
   {
     "name": "VIP Ticket",
     "id": "1",
-    "price": "1299"
+    "price": "1299",
+    "info": "incl. VIP Lounge"
   },
   {
     "name": "Green Camping",
     "id": "2",
-    "price": "249"
+    "price": "249",
+    "info": "incl. cleaning and CO2 compensation"
   },
   {
     "name": "2 Person Tent",
     "id": "3",
     "tent": 2,
-    "price": "299"
+    "price": "299", 
+    "info": "optional"
   },
   {
     "name": "3 Person Tent",
     "id": "4",
     "tent": 3,
-    "price": "399"
+    "price": "399",
+    "info": "optional"
   },
   {
     "name": "Set Your Own Tent",
     "id": "5",
-    "price": "0"
+    "price": "0", 
+    "info": "optional"
   }
 ]

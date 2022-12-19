@@ -19,7 +19,7 @@ export default function CreditCard(props) {
       body: JSON.stringify({ id: props.reservationID }),
     };
 
-    fetch("http://localhost:8080/fullfill-reservation", finalOptions)
+    fetch("https://exam2022-reaction.fly.dev/fullfill-reservation", finalOptions)
       .then((response) => response.json())
       .then((response) => console.log(response))
       .catch((err) => console.error(err));

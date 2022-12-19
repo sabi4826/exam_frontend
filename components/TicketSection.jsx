@@ -3,7 +3,6 @@ import "../src/style/index.module.css";
 import campingStyles from "../src/style/camping.module.css";
 import Tickets from "./Tickets";
 import Camping from "./Camping";
-import BookingH2 from "./BookingH2";
 
 export default function TicketSection(props) {
   return (
@@ -12,8 +11,7 @@ export default function TicketSection(props) {
         <div>
           <aside className={campingStyles.camping_heading}>
             <h3 className={campingStyles.camping_h3}>Tickets</h3>
-            {/* <p className={campingStyles.camping_p}>Tickets and extras</p> */}
-            <h5 className={bookingStyles.h5_text}>IMPORTANT! It is mandatory to select a camping area along with your ticket(s). Find available camping spots further down. 
+            <h5 className={bookingStyles.h5_text}>IMPORTANT! You must select a camping area along with your ticket(s). Find available camping spots further down. 
               It is only possible to buy a maximum of 5 tickets per purchase.</h5>
           </aside>
           <section className={bookingStyles.ticket_section}>
@@ -22,7 +20,8 @@ export default function TicketSection(props) {
             ))}
           </section>
           <aside className={campingStyles.camping_heading}>
-            <h3 className={campingStyles.camping_h3}>Camping spots</h3>
+            <h3 className={campingStyles.camping_h3}>Camping Areas</h3>
+            <p className={campingStyles.camping_p}>Please select one of these FooFest camping areas:</p>
           </aside>
           <section className={campingStyles.camping_container}>
             {props.camping.map((camping) => (

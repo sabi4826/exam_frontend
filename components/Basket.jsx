@@ -65,22 +65,21 @@ export default function Basket(props) {
           </h5>
         ))}
         <p className={bookingStyles.bookingFee}>Booking fee: 99,-</p>
+        <p className={bookingStyles.bookingFee}>Have you chosen your camping area?</p>
         <h3>Total: {getTotal()},-</h3>
         <p className={bookingStyles.bookingFee}>Number of tickets: {getTickets()}</p>
         <p className={bookingStyles.bookingFee}>Number of tent spots: {getTents()}</p>
         {!showForm && (
           // check for if tents bought and matching with tickets: 
-          <button onClick={() => 
-  {if(props.cart.includes(el=>el.id==="3" || "4"))
+          <button className={bookingStyles.booking_ticket_button} onClick={() => 
+  {if(props.cart.find(el=>el.id==="3" || "4")) {
     if(totalTentSpots>=totalTickets)
   {setShowForm(true)}
   else {
     alert("Your amount of tent spots does not match the amount of tickets reserved. Please add one or more tents.");
-   } else {
+   } } else {
     {setShowForm(true)}
-   }}} className={bookingStyles.booking_ticket_button}>
-            BUY TICKETS
-          </button>
+   }}}>Reserve your tickets</button>
         )}
         {showForm && <Booking reservationID={props.reservationID} totalTickets={totalTickets}/>}
       </section>

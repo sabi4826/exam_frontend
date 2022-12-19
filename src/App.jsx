@@ -73,7 +73,7 @@ export default function App() {
 
     // fetch camping available spots:
     async function fetchCamping() {
-      fetch("http://localhost:8080/available-spots")
+      fetch("https://exam2022-reaction.fly.dev/available-spots")
         .then((response) => response.json())
         .then((response) => {
           setCamping(response);
