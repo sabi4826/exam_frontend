@@ -5,12 +5,12 @@ import "../src/style/index.module.css";
 
 export default function Basket(props) {
   const [showForm, setShowForm] = useState(false);
-  let tent2=0;
-  let tent3=0;
-  let tent2Spot=0;
-  let tent3Spot=0;
-  let totalTentSpots=0;
-  let totalTickets=0;
+  let tent2 = 0;
+  let tent3 = 0;
+  let tent2Spot = 0;
+  let tent3Spot = 0;
+  let totalTentSpots = 0;
+  let totalTickets = 0;
 
   function getTotal() {
     let purchaseTotal = 0;
@@ -26,13 +26,13 @@ export default function Basket(props) {
 
   function getTents() {
     // find amount of tents in basket with amount and "tent"(2 or 3 spots) - return amount or 0:
-    tent2 = props.cart.find(el=>el.id==="3")?.amount||0; // set tent2 to amount of 2 pers. tents. If the amount is more than 0, * it with spots (2).
-    if(tent2>0) {
+    tent2 = props.cart.find((el) => el.id === "3")?.amount || 0; // set tent2 to amount of 2 pers. tents. If the amount is more than 0, * it with spots (2).
+    if (tent2 > 0) {
       tent2Spot = tent2 * 2; // 2 = spots in each tent = total of spots
     }
 
-    tent3 = props.cart.find(el=>el.id==="4")?.amount||0;
-    if(tent3>0) {
+    tent3 = props.cart.find((el) => el.id === "4")?.amount || 0;
+    if (tent3 > 0) {
       tent3Spot = tent3 * 3; // 3 = spots in each tent
     }
     totalTentSpots = tent2Spot + tent3Spot;
@@ -41,14 +41,17 @@ export default function Basket(props) {
 
   function getTickets() {
     // find amount of tickets in basket with "id" and amount - return amount or 0:
-    const regular = props.cart.find(el=>el.id==="0")?.amount||0;
-    const vip = props.cart.find(el=>el.id==="1")?.amount|| 0;
+    const regular = props.cart.find((el) => el.id === "0")?.amount || 0;
+    const vip = props.cart.find((el) => el.id === "1")?.amount || 0;
 
     totalTickets = regular + vip;
 
     if (totalTickets >= 5) {
       alert("You can select maximum 5 tickets.");
     }
+    //  else if (regular >= 1) {
+    //   alert("You have to select tents also!!");
+    // }
 
     return totalTickets;
   }
@@ -81,7 +84,7 @@ export default function Basket(props) {
     {setShowForm(true)}
    }}}>Reserve your tickets</button>
         )}
-        {showForm && <Booking reservationID={props.reservationID} totalTickets={totalTickets}/>}
+        {showForm && <Booking reservationID={props.reservationID} totalTickets={totalTickets} />}
       </section>
     </article>
   );

@@ -22,7 +22,7 @@ export default function Booking(props) {
       basket: props.cart,
     });
     setFirstPersonalInfoCompleted(true);
-  } 
+  }
 
   return (
     <>
@@ -40,17 +40,17 @@ export default function Booking(props) {
                 <label className={bookingStyles.label_text} htmlFor="name">
                   Name:
                 </label>
-                <input className={bookingStyles.input_text} type="text" name="name" required placeholder="Full Name"></input>
+                <input className={bookingStyles.input_text} type="text" name="name" required placeholder="Full Name" alt="full name"></input>
 
                 <label className={bookingStyles.label_text} htmlFor="phone">
                   Phone:
                 </label>
-                <input className={bookingStyles.input_text} type="tel" inputMode="numeric" name="phone" required placeholder="ex.+451234556"></input>
+                <input className={bookingStyles.input_text} type="tel" inputMode="numeric" name="phone" required placeholder="ex.+451234556" alt="phone number"></input>
 
                 <label className={bookingStyles.label_text} htmlFor="email">
                   E-mail:
                 </label>
-                <input className={bookingStyles.input_text} type="email" name="email" required placeholder="name@mail.com"></input>
+                <input className={bookingStyles.input_text} type="email" name="email" required placeholder="name@mail.com" alt="email"></input>
               </fieldset>
               <button type="submit" className={bookingStyles.booking_ticket_button}>
                 Proceed

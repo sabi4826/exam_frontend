@@ -10,9 +10,9 @@ export default function TicketSection(props) {
       <article>
         <div>
           <aside className={campingStyles.camping_heading}>
-            <h3 className={campingStyles.camping_h3}>Tickets</h3>
-            <h5 className={bookingStyles.h5_text}>IMPORTANT! You must select a camping area along with your ticket(s). Find available camping spots further down. 
-              It is only possible to buy a maximum of 5 tickets per purchase.</h5>
+            {/* <h3 className={campingStyles.camping_h3}>Tickets</h3> */}
+
+            {/* <h5 className={bookingStyles.h5_text}>IMPORTANT! It is mandatory to select a camping area along with your ticket(s). Find available camping spots further down. It is only possible to buy a maximum of 5 tickets per purchase.</h5> */}
           </aside>
           <section className={bookingStyles.ticket_section}>
             {props.products.map((product) => (

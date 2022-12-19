@@ -7,8 +7,14 @@
 body {
   background-color: #70d7ff;
 }
-#socials_logo {
-  width: 20%;
+img {
+  width: 15%;
+  height: auto;
+}
+@media screen and (min-width: 750px) {
+  img {
+    width: 30%;
+  }
 }
 
 /* //////////////footer styling///////////////////////////// */

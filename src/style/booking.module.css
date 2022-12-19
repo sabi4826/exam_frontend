@@ -134,7 +134,7 @@
   padding-left: 5rem;
   padding: 1rem;
   box-shadow: 1px 1px 10px #000;
-  margin: 3rem 2rem 1rem 2rem;
+  /* margin: 3rem 0rem 1rem 2rem; */
 }
 .calc_text_h4 {
   font-size: 1.5rem;
@@ -150,20 +150,27 @@
 }
 .label_text {
   font-family: "Righteous", cursive;
-  text-align: end;
+  text-align: left;
   margin-top: 1.2rem;
-  margin-right: 2rem;
+  padding-left: 1rem;
+  /* margin-right: 2rem; */
 }
 .input_text {
   padding: 0.8rem;
   margin: 0.5rem;
-  width: 13rem;
+  width: 14rem;
   border-radius: 10px;
   letter-spacing: 0.05rem;
   font-weight: 500;
-
-  /* margin-right: 6rem; */
-  /* text-transform: uppercase; */
+}
+.thankYou {
+  color: #000;
+}
+.h4_text {
+  margin: 0;
+}
+.p_text {
+  margin: 0%;
 }
 @media screen and (min-width: 601px) {
   .booking_container {
@@ -178,15 +185,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .h3_text {
-    font-size: 2rem;
+
+  .label_text {
+    text-align: center;
   }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .booking_container {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 0;
+    margin: 0;
   }
   .booking_section {
     display: grid;
@@ -197,14 +207,15 @@
     grid-template-columns: 1fr 1fr;
   }
   .h3_text {
-    font-size: 1.7rem;
+    margin-bottom: 0;
   }
   .form_styling {
     border: none;
-    text-align: start;
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr;
     padding-bottom: 1rem;
+    padding: 0;
   }
   .creditFormStyling {
     border: none;
@@ -226,9 +237,10 @@
     border-radius: 10px;
     letter-spacing: 0.05rem;
     font-weight: 500;
-
-    /* margin-right: 6rem; */
-    /* text-transform: uppercase; */
+  }
+  .calc_text {
+    margin: 1rem;
+    padding: 1rem;
   }
 }
 @media screen and (min-width: 850px) {
@@ -243,13 +255,23 @@
   .ticket_section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
-  .h3_text {
-    font-size: 3rem;
+
+  .form_styling {
+    display: grid;
+    grid-template-columns: 1fr;
   }
-  /* .calc_text {
-    position: relative;
-    top: 40%;
-  } */
+  .label_text {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .form_styling {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .label_text {
+    text-align: center;
+  }
 }
