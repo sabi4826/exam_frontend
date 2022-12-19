@@ -8,12 +8,9 @@ function Tickets(props) {
   return (
     <>
       <article className={bookingStyles.articleSection}>
-        <h4>{props.data.name}</h4>
+      <h4 className={bookingStyles.h4_text}>{props.data.name}</h4>
         <p className={campingStyles.camping_p}>{props.data.info}</p>
-        <p>{props.data.price},-</p>
-
-        <h4 className={bookingStyles.h4_text}>{props.data.name}</h4>
-        <p className={bookingStyles.p_text}>{props.data.price},-</p>
+        <p className={bookingStyles.p_text}>{props.data.price},-</p>   
         <button onClick={add} className={bookingStyles.add_cart}>
           Add to Cart
         </button>
