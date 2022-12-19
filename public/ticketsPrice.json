@@ -3,19 +3,19 @@
     "name": "Regular Ticket",
     "id": "0",
     "price": "799",
-    "info": ""
+    "info": "all the good stuff"
   },
   {
     "name": "VIP Ticket",
     "id": "1",
     "price": "1299",
-    "info": "incl. VIP Lounge"
+    "info": "incl. VIP Lounge, premium front row spots and 5 drink tickets"
   },
   {
     "name": "Green Camping",
     "id": "2",
     "price": "249",
-    "info": "incl. cleaning and CO2 compensation"
+    "info": "incl. CO2 compensation"
   },
   {
     "name": "2 Person Tent",

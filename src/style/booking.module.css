@@ -92,6 +92,11 @@
 .bookingFee {
   font-size: 1rem;
 }
+
+.hideBookingFee {
+  font-size: 0rem;
+}
+
 .quantity_form input {
   text-align: right;
 }

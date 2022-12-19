@@ -14,7 +14,6 @@ export default function Camping(props) {
       fetch('https://exam2022-reaction.fly.dev/reserve-spot', options)
       .then(res => res.json())
       .then(res => props.setReservationID(res.id))
-      // set reserveCamping to "response" here in the last "then"...
       .catch((err) => console.error(err));
   }
 
