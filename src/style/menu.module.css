@@ -118,7 +118,7 @@ nav li a {
 }
 nav li a {
   text-decoration: none;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-family: var(--secondary-font);
 }
 a {
