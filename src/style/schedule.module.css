@@ -21,6 +21,7 @@
   font-family: var(--secondary-font);
   /* margin-left: 4rem; */
   inset: 0 0 0 0;
+  cursor: pointer;
 
   animation-name: puls_kf;
   animation-duration: 1s;

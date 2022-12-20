@@ -6,7 +6,7 @@ import Schedule from "../components/Schedule";
 import Booking from "../components/Booking";
 import Basket from "../components/Basket";
 import TicketSection from "../components/TicketSection";
-import CampingBasket from "../components/CampingBasket";
+
 import bookingStyles from "../src/style/booking.module.css";
 import BookingH2 from "../components/BookingH2";
 import Newsletter from "../components/Newsletter";
