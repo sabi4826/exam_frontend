@@ -45,14 +45,12 @@ export default function Basket(props) {
     const vip = props.cart.find((el) => el.id === "1")?.amount || 0;
 
     totalTickets = regular + vip;
+    console.log(totalTickets);
 
     if (totalTickets >= 5) {
       alert("You can select maximum 5 tickets.");
+    } else {
     }
-    //  else if (regular >= 1) {
-    //   alert("You have to select tents also!!");
-    // }
-
     return totalTickets;
   }
 
