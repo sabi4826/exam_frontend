@@ -20,8 +20,10 @@ export default function Menu() {
           <li>
             <a href="#">FAQ</a>
           </li>
-          <button className={menuStyles.buyTicketButton}>BUY TICKETS</button>
         </ul>
+        <a href="BookingH2">
+        <button className={menuStyles.buyTicketButton}>BUY TICKETS</button>
+        </a>
       </nav>
     </div>
   );

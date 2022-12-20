@@ -89,14 +89,13 @@ export default function App() {
       <Menu />
       <Header />
       <Schedule />
-      <Newsletter />
       <BookingH2 />
 
       <section className={bookingStyles.booking_container}>
         <TicketSection products={products} camping={camping} addToCart={addToCart} setReservationID={setReservationID} />
         <Basket products={products} reservationID={reservationID} cart={cart} removeFromCart={removeFromCart} />
       </section>
-
+      <Newsletter />
       <Footer />
     </div>
   );
