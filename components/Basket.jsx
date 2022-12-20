@@ -72,9 +72,8 @@ export default function Basket(props) {
         <h3>Total: {getTotal()},-</h3>
         <p className={bookingStyles.hideBookingFee}>Number of tickets: {getTickets()}</p>
         <p className={bookingStyles.hideBookingFee}>Number of tent spots: {getTents()}</p>
-        {!showForm && (
-          // check for if tents bought and matching with tickets: 
-          <button className={bookingStyles.booking_ticket_button} onClick={() => 
+        {!showForm && (<button className={bookingStyles.booking_ticket_button} onClick={() => 
+        // check for if tents bought and matching with tickets:
   {if(props.cart.find(el=>el.id==="3" || "4")) {
     if(totalTentSpots>=totalTickets)
   {setShowForm(true)}

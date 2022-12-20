@@ -19,7 +19,6 @@ export default function App() {
     // console.log("addToCart", data);
     // do we have the ticket
     if (cart.find((entry) => entry.id === data.id)) {
-      /*  camping.area removed */
       setCart((oldCart) =>
         oldCart.map((entry) => {
           if (entry.id !== data.id) {
@@ -32,9 +31,6 @@ export default function App() {
         })
       );
     }
-    // else if (data.id >= 5) {
-    //   console.log("atready 5");
-    // }
     else {
       setCart((oldCart) => oldCart.concat({ ...data, amount: 1 }));
     }
@@ -44,14 +40,12 @@ export default function App() {
     console.log("removing", id);
     setCart((oldCart) => {
       const subtracted = oldCart.map((item) => {
-        console.log(item.id);
         if (item.name === id) {
           return { ...item, amount: item.amount - 1 };
         }
 
         return item;
       });
-      // console.log(subtracted);
       const filtered = subtracted.filter((item) => item.amount > 0);
 
       return filtered;
