@@ -11,7 +11,7 @@ export default function Menu() {
       <nav>
         <ul>
           <li>
-            <a href="#">SCHEDULE</a>
+            <a href="https://schedule-reaction.netlify.app/">SCHEDULE</a>
           </li>
           <li>
             <a href="#">ABOUT FOOFEST</a>
@@ -19,7 +19,6 @@ export default function Menu() {
           <li>
             <a href="#">FAQ</a>
           </li>
-
           <button className={menuStyles.buyTicketButton}>BUY TICKETS</button>
         </ul>
       </nav>
