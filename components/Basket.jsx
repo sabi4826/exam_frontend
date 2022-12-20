@@ -45,14 +45,12 @@ export default function Basket(props) {
     const vip = props.cart.find((el) => el.id === "1")?.amount || 0;
 
     totalTickets = regular + vip;
+    console.log(totalTickets);
 
     if (totalTickets >= 5) {
       alert("You can select maximum 5 tickets.");
+    } else {
     }
-    //  else if (regular >= 1) {
-    //   alert("You have to select tents also!!");
-    // }
-
     return totalTickets;
   }
 
@@ -72,16 +70,26 @@ export default function Basket(props) {
         <h3>Total: {getTotal()},-</h3>
         <p className={bookingStyles.hideBookingFee}>Number of tickets: {getTickets()}</p>
         <p className={bookingStyles.hideBookingFee}>Number of tent spots: {getTents()}</p>
-        {!showForm && (<button className={bookingStyles.booking_ticket_button} onClick={() => 
-        // check for if tents bought and matching with tickets:
-  {if(props.cart.find(el=>el.id==="3" || "4")) {
-    if(totalTentSpots>=totalTickets)
-  {setShowForm(true)}
-  else {
-    alert("Your amount of tent spots does not match the amount of tickets reserved. Please add one or more tents.");
-   } } else {
-    {setShowForm(true)}
-   }}}>Reserve your tickets</button>
+        {!showForm && (
+          // check for if tents bought and matching with tickets:
+          <button
+            className={bookingStyles.booking_ticket_button}
+            onClick={() => {
+              if (props.cart.find((el) => el.id === "3" || "4")) {
+                if (totalTentSpots >= totalTickets) {
+                  setShowForm(true);
+                } else {
+                  alert("Your amount of tent spots does not match the amount of tickets reserved. Please add one or more tents.");
+                }
+              } else {
+                {
+                  setShowForm(true);
+                }
+              }
+            }}
+          >
+            Reserve your tickets
+          </button>
         )}
         {showForm && <Booking reservationID={props.reservationID} totalTickets={totalTickets} />}
       </section>

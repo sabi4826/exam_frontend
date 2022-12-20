@@ -1,40 +1,46 @@
 [
   {
-    "name": "Regular Ticket",
+    "name": "Regular",
+    "type": "Ticket",
     "id": "0",
     "price": "799",
     "info": "all the good stuff"
   },
   {
-    "name": "VIP Ticket",
+    "name": "VIP",
+    "type": "Ticket",
     "id": "1",
     "price": "1299",
     "info": "incl. VIP Lounge"
   },
   {
-    "name": "Green Camping",
+    "name": "Green",
+    "type": "Camping",
     "id": "2",
     "price": "249",
     "info": "incl. CO2 compensation"
   },
   {
-    "name": "2 Person Tent",
+    "name": "2 Person",
+    "type": "Tent",
     "id": "3",
     "tent": 2,
-    "price": "299", 
+    "price": "299",
     "info": "optional"
   },
   {
-    "name": "3 Person Tent",
+    "name": "3 Person",
+    "type": "Tent",
     "id": "4",
     "tent": 3,
     "price": "399",
     "info": "optional"
   },
   {
-    "name": "Set Your Own Tent",
+    "name": "Set Your Own",
+    "type": "Tent",
     "id": "5",
-    "price": "0", 
+    "price": "0",
     "info": "optional"
   }
 ]

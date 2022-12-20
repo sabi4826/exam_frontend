@@ -1,6 +1,7 @@
 import React from "react";
 import menuStyles from "../src/style/menu.module.css";
 import "../src/style/index.module.css";
+import Tickets from "./Tickets";
 
 export default function Menu() {
   return (
