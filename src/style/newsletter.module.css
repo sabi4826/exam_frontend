@@ -1,5 +1,6 @@
 .newsletterBG {
-  background-color: var(--primary-font);
+  /*background-color: var(--primary-font); light blue colour used before*/
+  background-color: #6cc1f6;
   font-family: var(--secondary-font);
   /* padding: 2rem 5rem 2rem 5rem; */
   text-align: center;

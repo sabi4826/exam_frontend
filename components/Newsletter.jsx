@@ -8,7 +8,7 @@ export default function Newsletter() {
       <h2 className={newsletterStyles.header}>Wanna keep up with the good news?</h2>
       <p className={newsletterStyles.paragraf}>Sign up for our awesome newsletter to keep in touch with us at FooFest and get the latest news on artists, events and the schedule!</p>
 
-      <fielset className={newsletterStyles.letterForm}>
+      <fieldset className={newsletterStyles.letterForm}>
         <label htmlFor="newsletter_email" className={newsletterStyles.letterText}>
           E-mail
         </label>
@@ -16,7 +16,7 @@ export default function Newsletter() {
         <button type="submit" className={newsletterStyles.inputButton}>
           Submit
         </button>
-      </fielset>
+      </fieldset>
     </div>
   );
 }

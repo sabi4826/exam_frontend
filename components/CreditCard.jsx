@@ -32,8 +32,7 @@ export default function CreditCard(props) {
         {paymentCompleted ? (
           <section>
             <h3 className={bookingStyles.thankYou}>Thank you!</h3>
-            {/* <p>Thank you for your purchase!We look forward to seeing you at FooFest!</p> */}
-            <h5 className={bookingStyles.h5_text}>We send a confirmation e-mail to you :)</h5>
+            <h5 className={bookingStyles.h5_text}>We send a confirmation e-mail to you :) </h5>
           </section>
         ) : (
           <form onSubmit={submit} ref={creditCardForm}>
