@@ -2,11 +2,13 @@ import React from "react";
 import menuStyles from "../src/style/menu.module.css";
 import "../src/style/index.module.css";
 import Tickets from "./Tickets";
+import Button from "./Button";
+import { Link } from "react-router-dom";
 
 export default function Menu() {
   return (
     <div className={menuStyles.navigation}>
-      <a href="index.html">
+      <a href="#">
         <h2 className={menuStyles.logoText}>FooFest</h2>
       </a>
       <nav>
@@ -21,10 +23,11 @@ export default function Menu() {
             <a href="#">FAQ</a>
           </li>
         </ul>
-        <a href="BookingH2">
-        <button className={menuStyles.buyTicketButton}>BUY TICKETS</button>
-        </a>
+        <Link to="/Ticketbutton">
+          <button className={menuStyles.buyTicketButton}>BUY TICKETS</button>
+        </Link>
       </nav>
+      <Button />
     </div>
   );
 }
