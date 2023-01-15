@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import bookingStyles from "../src/style/booking.module.css";
 import Camping from "./Camping";
 import campingStyles from "../src/style/camping.module.css";
 
 export default function BookingH2(props) {
   return (
+<<<<<<< HEAD
     <>
       <div className={bookingStyles.bookingH2_div}>
         <h2 className={bookingStyles.bookingH2}>Ticket Booking</h2>
@@ -21,5 +21,12 @@ export default function BookingH2(props) {
         ))}
       </section>
     </>
+=======
+    <div className={bookingStyles.bookingH2_div}>
+      <h2 className={bookingStyles.bookingH2}>Ticket Booking</h2>
+      <h5 className={bookingStyles.h5_text}>IMPORTANT! You must select a camping area along with your ticket(s). 
+      Find available camping spots further down. It is only possible to buy a maximum of 5 tickets per purchase.</h5>
+    </div>
+>>>>>>> 250fee537190703dceac87e04d6b0d27dfe248d1
   );
 }
