@@ -5,6 +5,8 @@ import bookingStyles from "../style/booking.module.css";
 import TicketSection from "../../components/TicketSection";
 import Basket from "../../components/Basket";
 import BookingH2 from "../../components/BookingH2";
+import Menu from "../../components/Menu";
+import Footer from "../../components/Footer";
 
 const TicketButton = () => {
   const [products, setProducts] = useState([]);
@@ -81,14 +83,13 @@ const TicketButton = () => {
 
   return (
     <div>
-      <Link to="/" className={menuStyles.backButton}>
-        Home Page
-      </Link>
-      <BookingH2 />
+      <Menu />
+      <BookingH2 products={products} camping={camping} addToCart={addToCart} setReservationID={setReservationID} />
       <section className={bookingStyles.booking_container}>
         <TicketSection products={products} camping={camping} addToCart={addToCart} setReservationID={setReservationID} />
         <Basket products={products} reservationID={reservationID} cart={cart} removeFromCart={removeFromCart} />
       </section>
+      <Footer />
     </div>
   );
 };

@@ -26,6 +26,9 @@ body {
 nav li {
   list-style: none;
   display: inline;
+  color: black;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
 }
 nav li a {
   color: black;
@@ -81,7 +84,7 @@ nav li a {
   }
   nav li {
     margin-top: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   nav li a {
     font-size: 1rem;

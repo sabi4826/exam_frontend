@@ -1,9 +1,8 @@
 .camping_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   font-family: "Righteous", cursive;
   /* text-shadow: 2px 2px #000; */
   margin-bottom: 3rem;
+  text-align: center;
 }
 .camping_h4 {
   margin-bottom: 0.3rem;
@@ -18,6 +17,9 @@
   color: black;
   font-size: 1rem;
   text-shadow: none;
+}
+.camping_heading {
+  text-align: center;
 }
 @media (max-width: 600px) {
   .camping_container {
@@ -40,6 +42,6 @@
 @media screen and (min-width: 1000px) {
   .camping_container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
